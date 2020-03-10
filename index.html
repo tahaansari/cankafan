@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CanKaFan</title>
+    <link href="https://fonts.googleapis.com/css?family=Mukta:300,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+    <div id="app">
+        <div>
+            <full-page ref="fullpage" :options="options" id="fullpage">
+                <div id="section1" class="section">
+
+                    <span class="watchVideo">
+                        <a v-on:click="">
+                            <em class="watchVideo__play"></em>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <em class="watchVideo__text">watch video</em>
+                        </a>
+                    </span>
+
+                    <div class="homeMain">
+                        <img class="homeMain__katak-tish" src="./images/katak-tish.svg" alt="">
+                        <img src="./images/cankafan.svg" alt="">
+                        <img src="./images/asli-maza.svg" alt="">
+                        <p>Nothing communicates product freshness quite like opening a beverage can.</p>
+                        <img src="./images/silver-can.svg" alt="">
+                    </div>
+                </div>
+                <div id="section2" class="section">
+                    Second section ...
+                </div>
+                <div id="section3" class="section">
+                    Third section ...
+                </div>
+                <div id="section4" class="section fp-auto-height">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus quisquam mollitia ipsum quibusdam amet nam dolor distinctio consectetur reprehenderit saepe deserunt facilis ipsam accusantium blanditiis ducimus nobis impedit, aut esse at iste dolorum perspiciatis! Animi sint, harum ratione voluptate alias placeat totam aperiam rem. Quidem aperiam et similique molestiae laborum illum explicabo accusamus quibusdam magnam, reiciendis velit aspernatur odio! Voluptatibus, saepe ducimus itaque modi illo praesentium? Ullam aliquam error, odio nisi deleniti facere quis ab? Blanditiis at quod, soluta harum veritatis animi reiciendis facere sunt error dicta rem molestiae veniam, sapiente reprehenderit temporibus et ea unde. Beatae, architecto quam consectetur quibusdam iure magnam veritatis aliquid harum voluptate, consequatur, rem doloribus eaque tempora nihil voluptatem ea vel eum nisi iusto ipsa sequi distinctio minima nulla? Similique earum neque enim, sint cum mollitia ab reprehenderit consequatur consequuntur nemo vitae, quas nihil deserunt perferendis tempore aperiam exercitationem reiciendis veniam quidem? Beatae ex perspiciatis corporis dolore totam dolorum impedit illum nulla nostrum odio voluptatibus voluptates deleniti non, labore excepturi, maxime magni rerum nam enim sequi soluta quidem minima. Sed eius maiores vel ut, excepturi veniam magni aspernatur nam aut repellat vero tempore, impedit velit voluptatem repellendus ratione facilis corrupti possimus. Itaque aut consequatur quia odio similique officiis recusandae nihil, rem blanditiis placeat beatae harum nostrum! Architecto necessitatibus quis sed facilis exercitationem pariatur ea dolore 
+                </div>
+          </full-page>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-fullpage.js/dist/vue-fullpage.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            name: 'app',
+            data() {
+                return {
+                    options: {
+                        // sectionsColor: ['#41b883', '#ff5f45', '#0798ec', '#41b883', '#ff5f45', '#0798ec', '#41b883', '#ff5f45'],
+                        afterLoad: this.afterLoad,
+                        fitToSection:false
+                    },
+                }
+            },
+            methods:{
+                afterLoad(origin, destination, direction){
+                    if(destination.index >= 2){
+                        // this.$refs.fullpage.api.setAutoScrolling(false);
+                        console.log('normal scroll')
+                    }else{
+                        console.log('section scroll')
+                    }
+                    
+                }
+            }
+        });
+    </script>
+</body>
+</html>
