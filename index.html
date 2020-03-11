@@ -11,6 +11,41 @@
 <body>
     <div id="app">
         <div>
+            <comp-iconsvg></comp-iconsvg>
+            <full-page ref="fullpage" :options="options" id="fullpage">
+
+                <!-- <div id="section1" class="section">
+                    <a class="watchVideo" href="javascript:void(0)">watch video</a>
+                    <div class="homeMain">
+                        <img class="homeMain__katak-tish" src="./images/katak-tish.svg" alt="">
+                        <img src="./images/cankafan.svg" alt="">
+                        <img src="./images/asli-maza.svg" alt="">
+                        <p>Nothing communicates product freshness quite like opening a beverage can.</p>
+                        <img src="./images/silver-can.svg" alt="">
+                    </div>
+                </div> -->
+                <comp-faq></comp-faq>
+                <comp-emquiry></comp-emquiry>
+                <comp-footer></comp-footer>
+          </full-page>
+        </div>
+    </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+    </script>
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-fullpage.js/dist/vue-fullpage.min.js"></script>
+
+    <script>
+
+
+
+        Vue.component('comp-iconsvg',{
+            template:`
             <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <defs>
                 <symbol id="icon-facebok" viewBox="0 0 24 32">
@@ -27,36 +62,82 @@
                 </symbol>
                 </defs>
             </svg>
-            <full-page ref="fullpage" :options="options" id="fullpage">
-                <!-- <div id="section1" class="section">
-                    <a class="watchVideo" href="javascript:void(0)">watch video</a>
-                    <div class="homeMain">
-                        <img class="homeMain__katak-tish" src="./images/katak-tish.svg" alt="">
-                        <img src="./images/cankafan.svg" alt="">
-                        <img src="./images/asli-maza.svg" alt="">
-                        <p>Nothing communicates product freshness quite like opening a beverage can.</p>
-                        <img src="./images/silver-can.svg" alt="">
+            `
+        })
+
+
+        Vue.component('comp-faq',{
+            data:function(){
+                return{
+                    question:"How to share it on Whats app?",
+                    
+                }
+            },
+            template:`
+            <div id="section2" class="section faq fp-auto-height">
+                    <h2>We are here to help you</h2>
+                    <p>Browse through the most frequently asked questions.</p>
+                    <div class="ta-container">
+                        <div class="faq-box">
+                            <div class="faq-box__item">
+                                <div class="faq-box__question">
+                                    <h2>{{ question }}</h2>
+                                    <a href="javascript:void(0)">Plus</a>
+                                </div>
+                                <div class="faq-box__answer">
+                                    <p>{{ answer }}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div id="section2" class="section">
-                    Second section ...
+            `
+        })
+
+        Vue.component('comp-emquiry',{
+            template:`
+                <div id="section3" class="section enquiry fp-auto-height">
+                    <h2>Cant find what you’re looking for?</h2>
+                    <p>email your query at cankafan@gmail.com</p>
+                    <form class="enq-form" action="#">
+                        <div class="enq-form__inputWrap">
+                            <input type="text" id="name" name="name" placeholder="Full Name"/>
+                        </div>
+                        <div class="enq-form__inputWrap">
+                            <input type="text" id="email" name="email" placeholder="Email Address"/>
+                        </div>
+                        <div class="enq-form__inputWrap">
+                            <input type="text" id="subject" name="subject" placeholder="Mobile Number"/>
+                        </div>
+                        <div class="enq-form__inputWrap">
+                            <textarea rows="10" cols="20" id="message" name="message" placeholder="Comment"></textarea>
+                        </div>
+                        <a class="enq-form__submit" href="#">Submit</a>
+                    </form>
                 </div>
-                <div id="section3" class="section">
-                    Third section ...
-                </div> -->
-                <div class="section footer fp-auto-height">
+            `
+        })
+
+        Vue.component('comp-footer', {
+            data: function () {
+                return {
+                    count: 0
+                }
+            },
+            template: `
+            <div class="section footer fp-auto-height">
                     <div class="l-flex l-align-center l-justify-sb">
                         <div class="followus-wrapper">
-                            <p>Follow us:</p>
+                            <p class="followus-wrapper__text">Follow us:</p>
                             <ul class="followus-links">
                                 <li>
-                                    <svg><use xlink:href="#icon-facebok"></use></svg>
+                                    <svg class="followus-links__svg"><use xlink:href="#icon-facebok"></use></svg>
                                 </li>
                                 <li>
-                                    <svg><use xlink:href="#icon-instagram"></use></svg>
+                                    <svg class="followus-links__svg"><use xlink:href="#icon-instagram"></use></svg>
                                 </li>
                                 <li>
-                                    <svg><use xlink:href="#icon-twitter"></use></svg>
+                                    <svg class="followus-links__svg"><use xlink:href="#icon-twitter"></use></svg>
                                 </li>
                             </ul>
                         </div>
@@ -67,25 +148,15 @@
                         </ul>
                     </div>
                 </div>
-          </full-page>
-        </div>
-    </div>
-    <script
-        src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous">
-    </script>
-    <script src="./js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue-fullpage.js/dist/vue-fullpage.min.js"></script>
-    <script>
+            `
+        })
+
         new Vue({
             el: '#app',
             name: 'app',
             data() {
                 return {
                     options: {
-                        // sectionsColor: ['#41b883', '#ff5f45', '#0798ec', '#41b883', '#ff5f45', '#0798ec', '#41b883', '#ff5f45'],
                         afterLoad: this.afterLoad,
                         fitToSection:false
                     },
@@ -99,10 +170,11 @@
                     }else{
                         console.log('section scroll')
                     }
-                    
                 }
             }
         });
+
     </script>
+
 </body>
 </html>
