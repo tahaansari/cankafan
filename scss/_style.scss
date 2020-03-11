@@ -1,0 +1,49 @@
+body{ font-family: 'Mukta', sans-serif; }
+#section1{ background: url(../images/purplebg.jpg) no-repeat center/cover; }
+#section2{ background: url(../images/greenbg.jpg) no-repeat center/cover; }
+#section3{ background: url(../images/yellow.jpg) no-repeat center/cover; }
+#section4{ background: url(../images/lightpurple.jpg) no-repeat center/cover; }
+.watchVideo{
+    position: fixed;
+    right: 0;
+    top: 5%;
+    transform: translateX(calc(100% - 60px));
+    background: #FFB507 url(../images/Triangle.svg) no-repeat 28px center/15px;
+    padding: 18px 60px;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: .1s;
+    &.open{
+        transform: translateX(0);
+        padding: 18px 40px;
+        background-size: 0;
+    }
+}
+.homeMain{
+    color: #ffffff;
+    img{ display: block; margin: auto; }
+    &__katak-tish{
+        position: absolute;
+        top: 5%;
+        left: 5%;
+    }
+}
+.footer{ 
+    background-color: #02204E; 
+    color: #ffffff;
+    padding: 20px 50px;
+}
+.followus-wrapper{
+    display: inline-block;
+    text-align: center;
+}
+.followus-links{
+    display: inline-block;
+    li{ display: inline; }
+}
+.footer-links{
+    display: inline-block;
+    li{ display: inline; }
+}

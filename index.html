@@ -6,23 +6,30 @@
     <title>CanKaFan</title>
     <link href="https://fonts.googleapis.com/css?family=Mukta:300,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
-    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/includes.min.css">
 </head>
 <body>
     <div id="app">
         <div>
+            <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                <symbol id="icon-facebok" viewBox="0 0 24 32">
+                <title>facebok</title>
+                <path fill="#ffb507" style="fill: var(--color1, #ffb507)" d="M4.262 10.667h-4.262v5.333h4.262v16h7.103v-16h5.174l0.509-5.333h-5.683v-2.223c0-1.273 0.273-1.777 1.584-1.777h4.099v-6.667h-5.41c-5.109 0-7.376 2.111-7.376 6.153v4.513z"></path>
+                </symbol>
+                <symbol id="icon-instagram" viewBox="0 0 33 32">
+                <title>instagram</title>
+                <path fill="#ffb507" style="fill: var(--color1, #ffb507)" d="M33.144 8.114c-0.242-5.25-2.728-7.759-8.050-8-2.072-0.094-2.694-0.114-7.937-0.114s-5.864 0.020-7.936 0.112c-5.327 0.241-7.806 2.752-8.050 8-0.093 2.059-0.115 2.675-0.115 7.886 0 5.213 0.020 5.829 0.115 7.886 0.242 5.239 2.715 7.759 8.050 8.002 2.070 0.094 2.692 0.114 7.936 0.114 5.247 0 5.865-0.019 7.937-0.114 5.327-0.241 7.806-2.755 8.050-8 0.093-2.057 0.113-2.674 0.113-7.886 0-5.211-0.018-5.829-0.113-7.886zM6.738 15.999c0-5.717 4.665-10.352 10.418-10.352s10.418 4.635 10.418 10.352c0 5.719-4.665 10.354-10.418 10.354s-10.418-4.637-10.418-10.354zM17.156 22.588c-3.661 0-6.63-2.948-6.63-6.588 0-3.638 2.968-6.588 6.63-6.588s6.63 2.95 6.63 6.588c0 3.64-2.968 6.588-6.63 6.588zM25.68 5.647c0-1.039 0.848-1.882 1.895-1.882 1.046 0 1.893 0.843 1.893 1.882s-0.847 1.882-1.893 1.882c-1.047 0-1.895-0.843-1.895-1.882z"></path>
+                </symbol>
+                <symbol id="icon-twitter" viewBox="0 0 40 32">
+                <title>twitter</title>
+                <path fill="#ffb507" style="fill: var(--color1, #ffb507)" d="M13.079 32c15.011 0 23.22-12.31 23.22-22.985 0-0.35-0.007-0.698-0.023-1.044 1.593-1.14 2.978-2.563 4.071-4.183-1.462 0.644-3.036 1.076-4.687 1.272 1.685-1 2.978-2.583 3.589-4.468-1.577 0.925-3.323 1.598-5.182 1.961-1.489-1.57-3.61-2.552-5.957-2.552-4.507 0-8.162 3.618-8.162 8.077 0 0.634 0.072 1.251 0.212 1.842-6.783-0.338-12.798-3.552-16.822-8.44-0.701 1.194-1.105 2.581-1.105 4.060 0 2.802 1.441 5.277 3.632 6.724-1.339-0.041-2.597-0.405-3.696-1.010-0.001 0.034-0.001 0.067-0.001 0.103 0 3.912 2.813 7.179 6.548 7.919-0.686 0.185-1.408 0.284-2.152 0.284-0.525 0-1.037-0.051-1.534-0.146 1.039 3.21 4.052 5.545 7.624 5.611-2.793 2.167-6.312 3.458-10.136 3.458-0.658 0-1.308-0.037-1.947-0.112 3.612 2.292 7.901 3.629 12.51 3.629z"></path>
+                </symbol>
+                </defs>
+            </svg>
             <full-page ref="fullpage" :options="options" id="fullpage">
-                <div id="section1" class="section">
-
-                    <span class="watchVideo">
-                        <a v-on:click="">
-                            <em class="watchVideo__play"></em>
-                        </a>
-                        <a href="javascript:void(0)">
-                            <em class="watchVideo__text">watch video</em>
-                        </a>
-                    </span>
-
+                <!-- <div id="section1" class="section">
+                    <a class="watchVideo" href="javascript:void(0)">watch video</a>
                     <div class="homeMain">
                         <img class="homeMain__katak-tish" src="./images/katak-tish.svg" alt="">
                         <img src="./images/cankafan.svg" alt="">
@@ -36,13 +43,38 @@
                 </div>
                 <div id="section3" class="section">
                     Third section ...
-                </div>
-                <div id="section4" class="section fp-auto-height">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus quisquam mollitia ipsum quibusdam amet nam dolor distinctio consectetur reprehenderit saepe deserunt facilis ipsam accusantium blanditiis ducimus nobis impedit, aut esse at iste dolorum perspiciatis! Animi sint, harum ratione voluptate alias placeat totam aperiam rem. Quidem aperiam et similique molestiae laborum illum explicabo accusamus quibusdam magnam, reiciendis velit aspernatur odio! Voluptatibus, saepe ducimus itaque modi illo praesentium? Ullam aliquam error, odio nisi deleniti facere quis ab? Blanditiis at quod, soluta harum veritatis animi reiciendis facere sunt error dicta rem molestiae veniam, sapiente reprehenderit temporibus et ea unde. Beatae, architecto quam consectetur quibusdam iure magnam veritatis aliquid harum voluptate, consequatur, rem doloribus eaque tempora nihil voluptatem ea vel eum nisi iusto ipsa sequi distinctio minima nulla? Similique earum neque enim, sint cum mollitia ab reprehenderit consequatur consequuntur nemo vitae, quas nihil deserunt perferendis tempore aperiam exercitationem reiciendis veniam quidem? Beatae ex perspiciatis corporis dolore totam dolorum impedit illum nulla nostrum odio voluptatibus voluptates deleniti non, labore excepturi, maxime magni rerum nam enim sequi soluta quidem minima. Sed eius maiores vel ut, excepturi veniam magni aspernatur nam aut repellat vero tempore, impedit velit voluptatem repellendus ratione facilis corrupti possimus. Itaque aut consequatur quia odio similique officiis recusandae nihil, rem blanditiis placeat beatae harum nostrum! Architecto necessitatibus quis sed facilis exercitationem pariatur ea dolore 
+                </div> -->
+                <div class="section footer fp-auto-height">
+                    <div class="l-flex l-align-center l-justify-sb">
+                        <div class="followus-wrapper">
+                            <p>Follow us:</p>
+                            <ul class="followus-links">
+                                <li>
+                                    <svg><use xlink:href="#icon-facebok"></use></svg>
+                                </li>
+                                <li>
+                                    <svg><use xlink:href="#icon-instagram"></use></svg>
+                                </li>
+                                <li>
+                                    <svg><use xlink:href="#icon-twitter"></use></svg>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="footer-links">
+                            <li>Terms & Condition</li>
+                            <li>Privacy Policy</li>
+                            <li>Disclaimer</li>
+                        </ul>
+                    </div>
                 </div>
           </full-page>
         </div>
     </div>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+    </script>
     <script src="./js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-fullpage.js/dist/vue-fullpage.min.js"></script>
