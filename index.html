@@ -9,43 +9,9 @@
     <link rel="stylesheet" href="./css/includes.min.css">
 </head>
 <body>
+
     <div id="app">
         <div>
-            <comp-iconsvg></comp-iconsvg>
-            <full-page ref="fullpage" :options="options" id="fullpage">
-
-                <!-- <div id="section1" class="section">
-                    <a class="watchVideo" href="javascript:void(0)">watch video</a>
-                    <div class="homeMain">
-                        <img class="homeMain__katak-tish" src="./images/katak-tish.svg" alt="">
-                        <img src="./images/cankafan.svg" alt="">
-                        <img src="./images/asli-maza.svg" alt="">
-                        <p>Nothing communicates product freshness quite like opening a beverage can.</p>
-                        <img src="./images/silver-can.svg" alt="">
-                    </div>
-                </div> -->
-                <comp-faq></comp-faq>
-                <comp-emquiry></comp-emquiry>
-                <comp-footer></comp-footer>
-          </full-page>
-        </div>
-    </div>
-
-    <script
-        src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous">
-    </script>
-    <script src="./js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue-fullpage.js/dist/vue-fullpage.min.js"></script>
-
-    <script>
-
-
-
-        Vue.component('comp-iconsvg',{
-            template:`
             <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <defs>
                 <symbol id="icon-facebok" viewBox="0 0 24 32">
@@ -60,43 +26,80 @@
                 <title>twitter</title>
                 <path fill="#ffb507" style="fill: var(--color1, #ffb507)" d="M13.079 32c15.011 0 23.22-12.31 23.22-22.985 0-0.35-0.007-0.698-0.023-1.044 1.593-1.14 2.978-2.563 4.071-4.183-1.462 0.644-3.036 1.076-4.687 1.272 1.685-1 2.978-2.583 3.589-4.468-1.577 0.925-3.323 1.598-5.182 1.961-1.489-1.57-3.61-2.552-5.957-2.552-4.507 0-8.162 3.618-8.162 8.077 0 0.634 0.072 1.251 0.212 1.842-6.783-0.338-12.798-3.552-16.822-8.44-0.701 1.194-1.105 2.581-1.105 4.060 0 2.802 1.441 5.277 3.632 6.724-1.339-0.041-2.597-0.405-3.696-1.010-0.001 0.034-0.001 0.067-0.001 0.103 0 3.912 2.813 7.179 6.548 7.919-0.686 0.185-1.408 0.284-2.152 0.284-0.525 0-1.037-0.051-1.534-0.146 1.039 3.21 4.052 5.545 7.624 5.611-2.793 2.167-6.312 3.458-10.136 3.458-0.658 0-1.308-0.037-1.947-0.112 3.612 2.292 7.901 3.629 12.51 3.629z"></path>
                 </symbol>
+                <symbol id="icon-minus" viewBox="0 0 144 32">
+                <title>minus</title>
+                <path d="M144 32v-32h-144v32h144z"></path>
+                </symbol>
+                <symbol id="icon-plus" viewBox="0 0 30 32">
+                <title>plus</title>
+                <path d="M29.709 13.3v5.16h-12.12v12.12h-5.16v-12.12h-12.12v-5.16h12.12v-12.12h5.16v12.12h12.12z"></path>
+                </symbol>
                 </defs>
             </svg>
-            `
-        })
-
-
-        Vue.component('comp-faq',{
-            data:function(){
-                return{
-                    question:"How to share it on Whats app?",
-                    
-                }
-            },
-            template:`
-            <div id="section2" class="section faq fp-auto-height">
-                    <h2>We are here to help you</h2>
-                    <p>Browse through the most frequently asked questions.</p>
+            <full-page ref="fullpage" :options="options" id="fullpage">
+                <!-- <div id="section1" class="section">
+                    <a class="watchVideo" href="javascript:void(0)">watch video</a>
+                    <div class="homeMain">
+                        <img class="homeMain__katak-tish" src="./images/katak-tish.svg" alt="">
+                        <img src="./images/cankafan.svg" alt="">
+                        <img src="./images/asli-maza.svg" alt="">
+                        <p>Nothing communicates product freshness quite like opening a beverage can.</p>
+                        <img src="./images/silver-can.svg" alt="">
+                    </div>
+                </div> -->
+                <div id="section2" class="section faq fp-auto-height">
+                    <div class="section-heading">
+                        <h2>We are here to help you</h2>
+                        <p>Browse through the most frequently asked questions.</p>
+                    </div>
                     <div class="ta-container">
                         <div class="faq-box">
-                            <div class="faq-box__item">
-                                <div class="faq-box__question">
-                                    <h2>{{ question }}</h2>
-                                    <a href="javascript:void(0)">Plus</a>
+                            <div class="faq-box__item" v-on:click="toggleAnswer($event)">
+                                <div class="faq-box__question l-flex l-justify-sb l-align-center">
+                                    <h2>How to share it on Whats app?</h2>
+                                    <a href="javascript:void(0)" class="faq-box__ico-wrap">
+                                        <svg class="faq-box__ico faq-box__ico--plus"> <use xlink:href="#icon-plus"></svg>
+                                        <svg class="faq-box__ico faq-box__ico--minus"> <use xlink:href="#icon-minus"></svg>
+                                    </a>
                                 </div>
                                 <div class="faq-box__answer">
-                                    <p>{{ answer }}</p>
+                                    <div class="faq-box__content">
+                                        <p>Look at the share icon on the website to share it via whats app and other social platforms too</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-box__item" v-on:click="toggleAnswer($event)">
+                                <div class="faq-box__question l-flex l-justify-sb l-align-center">
+                                    <h2>How to share it on Whats app?</h2>
+                                    <a href="javascript:void(0)" class="faq-box__ico-wrap">
+                                        <svg class="faq-box__ico faq-box__ico--plus"> <use xlink:href="#icon-plus"></svg>
+                                        <svg class="faq-box__ico faq-box__ico--minus"> <use xlink:href="#icon-minus"></svg>
+                                    </a>
+                                </div>
+                                <div class="faq-box__answer">
+                                    <div class="faq-box__content">
+                                        <p>Look at the share icon on the website to share it via whats app and other social platforms too</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-box__item" v-on:click="toggleAnswer($event)">
+                                <div class="faq-box__question l-flex l-justify-sb l-align-center">
+                                    <h2>How to share it on Whats app?</h2>
+                                    <a href="javascript:void(0)" class="faq-box__ico-wrap">
+                                        <svg class="faq-box__ico faq-box__ico--plus"> <use xlink:href="#icon-plus"></svg>
+                                        <svg class="faq-box__ico faq-box__ico--minus"> <use xlink:href="#icon-minus"></svg>
+                                    </a>
+                                </div>
+                                <div class="faq-box__answer">
+                                    <div class="faq-box__content">
+                                        <p>Look at the share icon on the website to share it via whats app and other social platforms too</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            `
-        })
-
-        Vue.component('comp-emquiry',{
-            template:`
-                <div id="section3" class="section enquiry fp-auto-height">
+                <!-- <div id="section3" class="section enquiry fp-auto-height">
                     <h2>Cant find what you’re looking for?</h2>
                     <p>email your query at cankafan@gmail.com</p>
                     <form class="enq-form" action="#">
@@ -114,18 +117,8 @@
                         </div>
                         <a class="enq-form__submit" href="#">Submit</a>
                     </form>
-                </div>
-            `
-        })
-
-        Vue.component('comp-footer', {
-            data: function () {
-                return {
-                    count: 0
-                }
-            },
-            template: `
-            <div class="section footer fp-auto-height">
+                </div> -->
+                <!-- <div class="section footer fp-auto-height">
                     <div class="l-flex l-align-center l-justify-sb">
                         <div class="followus-wrapper">
                             <p class="followus-wrapper__text">Follow us:</p>
@@ -147,10 +140,20 @@
                             <li>Disclaimer</li>
                         </ul>
                     </div>
-                </div>
-            `
-        })
+                </div> -->
+          </full-page>
+        </div>
+    </div>
 
+    <!-- production mode -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+    <!-- Development mode -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+
+    <script src="https://unpkg.com/vue-fullpage.js/dist/vue-fullpage.min.js"></script>
+
+    <script>
         new Vue({
             el: '#app',
             name: 'app',
@@ -163,18 +166,22 @@
                 }
             },
             methods:{
-                afterLoad(origin, destination, direction){
-                    if(destination.index >= 2){
-                        // this.$refs.fullpage.api.setAutoScrolling(false);
-                        console.log('normal scroll')
-                    }else{
-                        console.log('section scroll')
-                    }
-                }
+                // afterLoad:function(origin, destination, direction){
+                //     if(destination.index >= 2){
+                //         // this.$refs.fullpage.api.setAutoScrolling(false);
+                //         console.log('normal scroll')
+                //     }else{
+                //         console.log('section scroll')
+                //     }
+                // },
+                toggleAnswer: (e) => {
+                    console.log(e)
+                },
+                // toggleAnswer() {
+                //     console.log(this);
+                // }
             }
         });
-
     </script>
-
 </body>
 </html>

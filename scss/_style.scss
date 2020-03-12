@@ -1,8 +1,16 @@
-body{ font-family: 'Mukta', sans-serif; font-size: 137.5%; }
-#section1{ background: url(../images/purplebg.jpg) no-repeat center/cover; }
-h1,h2,h3,h4,h5,h6{ font-weight: bold; }
+body{ 
+    font-family: 'Mukta', sans-serif; 
+    font-size: 100%; 
+    @media(min-width:768px){
+        font-size: 137.5%;
+    }
+}
 
+h1,h2,h3,h4,h5,h6{ font-weight: bold; }
 h2{ font-size: 1.36em; }
+.section{ padding-left: 15px; padding-right: 15px; }
+
+#section1{ background: url(../images/purplebg.jpg) no-repeat center/cover; }
 
 ::-webkit-input-placeholder { /* Edge */font-weight: bold; color: #ACACAC; font-size: 100%; }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */font-weight: bold; color: #ACACAC; font-size: 100%; }
@@ -59,7 +67,7 @@ h2{ font-size: 1.36em; }
     }
 }
 .followus-links{
-    line-height: 0;
+    font-size: 0;
     li{ 
         display: inline-block; 
         margin: 0 10px;
@@ -78,12 +86,10 @@ h2{ font-size: 1.36em; }
         margin: 0 10px;
     }
 }
-
 .enquiry{
     padding: 50px 0;
     text-align: center;
 }
-
 .enq-form{
     margin-top: 20px;
     &__inputWrap{
@@ -114,10 +120,9 @@ h2{ font-size: 1.36em; }
 
     }
 }
-
-
 .faq{
-    padding: 90px 0;
+    padding-top: 90px;
+    padding-bottom: 90px;
     background-color: #FFE8B2;
     text-align: center;
     .ta-container{
@@ -126,10 +131,44 @@ h2{ font-size: 1.36em; }
     }
 }
 .faq-box{
-    margin-top: 20px;
     text-align: left;
     &__item{
-        padding-bottom: 10px;
+        padding: 10px 0;
         border-bottom: 1px solid rgba(204,204,204,0.5);
+        &:last-child{
+            border-bottom: 0;
+        }
     }
+    &__item.show{
+        .faq-box__answer{ display: block; }
+    }
+    &__ico-wrap{
+        display: inline-block;
+        font-size: 0;
+    }
+    &__ico{
+        width: 20px;
+        height: 20px;
+        &--plus{
+            // margin-right: 10px;
+            display: none;
+        }
+    }
+    &__question{
+        // margin-bottom: 10px;
+    }
+    &__answer{
+        // display: none;
+        padding-left: 20px;
+        margin-left: 20px;
+        margin-bottom: 14px;
+        border-left: 1px solid #02204E;
+    }
+    &__content{
+        display: inline-block;
+        max-width: 468px;
+    }
+}
+.section-heading{
+    margin-bottom: 20px;
 }

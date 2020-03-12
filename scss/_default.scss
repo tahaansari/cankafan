@@ -1,9 +1,25 @@
-*{ margin: 0; padding: 0; text-decoration: none; outline: none; color: inherit; font-style: normal; font-weight: normal; font-family: inherit;}
+// for all elements
+*{ margin: 0; padding: 0; text-decoration: none; outline: none; color: inherit; font-style: normal; font-weight: normal; font-family: inherit; line-height: 1.6;}
+// for all elements
+
+// code elements
 ul{ list-style: none; }
 img{ max-width: 100%; }
+p+p{ margin-top: 5px; }
+section{ padding-left: 15px; padding-right: 15px; }
+// code elements
+
+// layout
 .l-flex{ display: flex; }
 .l-align-center{ align-items: center; }
 .l-justify-start{ justify-content: flex-start; }
 .l-justify-center{ justify-content: center; }
 .l-justify-end{ justify-content: flex-end;}
 .l-justify-sb{ justify-content: space-between; }
+// layout
+
+// placeholder
+::-webkit-input-placeholder { /* Edge */ color: #ACACAC; }
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ color: #ACACAC; }
+::placeholder { color: #ACACAC; }
+// placeholder
