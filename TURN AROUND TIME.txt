@@ -1,0 +1,17 @@
+TURN AROUND TIME
+navigation component
+default css
+font size in em
+using BEM increase speed and reduce css conflits on other compenents
+
+PAGE SPEED
+0 server request for icons
+
+ACCEBILITY
+body font size to 100%
+
+TO TARGET MOBILE DEVICE FIRST
+mobile first approach
+
+No breakpoint for future ready code
+

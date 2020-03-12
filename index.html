@@ -1,187 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CanKaFan</title>
-    <link href="https://fonts.googleapis.com/css?family=Mukta:300,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
-    <link rel="stylesheet" href="./css/includes.min.css">
-</head>
-<body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CanKaFan</title>
+      <link href="https://fonts.googleapis.com/css?family=Mukta:300,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" 
+         href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css" 
+         integrity="sha256-27KRQA6ck6EiKWEkCpHR2NcEeAYnqz8Q5a83PYHh1z0=" 
+         crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" />
+      <link rel="stylesheet" href="./css/includes.min.css">
+   </head>
+   <body>
+      <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <defs>
+            <symbol id="icon-facebok" viewBox="0 0 24 32">
+               <title>facebok</title>
+               <path fill="#ffb507" style="fill: var(--color1, #ffb507)" d="M4.262 10.667h-4.262v5.333h4.262v16h7.103v-16h5.174l0.509-5.333h-5.683v-2.223c0-1.273 0.273-1.777 1.584-1.777h4.099v-6.667h-5.41c-5.109 0-7.376 2.111-7.376 6.153v4.513z"></path>
+            </symbol>
+            <symbol id="icon-instagram" viewBox="0 0 33 32">
+               <title>instagram</title>
+               <path fill="#ffb507" style="fill: var(--color1, #ffb507)" d="M33.144 8.114c-0.242-5.25-2.728-7.759-8.050-8-2.072-0.094-2.694-0.114-7.937-0.114s-5.864 0.020-7.936 0.112c-5.327 0.241-7.806 2.752-8.050 8-0.093 2.059-0.115 2.675-0.115 7.886 0 5.213 0.020 5.829 0.115 7.886 0.242 5.239 2.715 7.759 8.050 8.002 2.070 0.094 2.692 0.114 7.936 0.114 5.247 0 5.865-0.019 7.937-0.114 5.327-0.241 7.806-2.755 8.050-8 0.093-2.057 0.113-2.674 0.113-7.886 0-5.211-0.018-5.829-0.113-7.886zM6.738 15.999c0-5.717 4.665-10.352 10.418-10.352s10.418 4.635 10.418 10.352c0 5.719-4.665 10.354-10.418 10.354s-10.418-4.637-10.418-10.354zM17.156 22.588c-3.661 0-6.63-2.948-6.63-6.588 0-3.638 2.968-6.588 6.63-6.588s6.63 2.95 6.63 6.588c0 3.64-2.968 6.588-6.63 6.588zM25.68 5.647c0-1.039 0.848-1.882 1.895-1.882 1.046 0 1.893 0.843 1.893 1.882s-0.847 1.882-1.893 1.882c-1.047 0-1.895-0.843-1.895-1.882z"></path>
+            </symbol>
+            <symbol id="icon-twitter" viewBox="0 0 40 32">
+               <title>twitter</title>
+               <path fill="#ffb507" style="fill: var(--color1, #ffb507)" d="M13.079 32c15.011 0 23.22-12.31 23.22-22.985 0-0.35-0.007-0.698-0.023-1.044 1.593-1.14 2.978-2.563 4.071-4.183-1.462 0.644-3.036 1.076-4.687 1.272 1.685-1 2.978-2.583 3.589-4.468-1.577 0.925-3.323 1.598-5.182 1.961-1.489-1.57-3.61-2.552-5.957-2.552-4.507 0-8.162 3.618-8.162 8.077 0 0.634 0.072 1.251 0.212 1.842-6.783-0.338-12.798-3.552-16.822-8.44-0.701 1.194-1.105 2.581-1.105 4.060 0 2.802 1.441 5.277 3.632 6.724-1.339-0.041-2.597-0.405-3.696-1.010-0.001 0.034-0.001 0.067-0.001 0.103 0 3.912 2.813 7.179 6.548 7.919-0.686 0.185-1.408 0.284-2.152 0.284-0.525 0-1.037-0.051-1.534-0.146 1.039 3.21 4.052 5.545 7.624 5.611-2.793 2.167-6.312 3.458-10.136 3.458-0.658 0-1.308-0.037-1.947-0.112 3.612 2.292 7.901 3.629 12.51 3.629z"></path>
+            </symbol>
+            <symbol id="icon-minus" viewBox="0 0 144 32">
+               <title>minus</title>
+               <path d="M144 32v-32h-144v32h144z"></path>
+            </symbol>
+            <symbol id="icon-plus" viewBox="0 0 30 32">
+               <title>plus</title>
+               <path d="M29.709 13.3v5.16h-12.12v12.12h-5.16v-12.12h-12.12v-5.16h12.12v-12.12h5.16v12.12h12.12z"></path>
+            </symbol>
+            <symbol id="icon-arrow" viewBox="0 0 32 32">
+               <title>arrow</title>
+               <path fill="#ffb507" style="fill: var(--color1, #ffb507)" d="M16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16c-8.837 0-16 7.163-16 16s7.163 16 16 16z"></path>
+               <path fill="none" stroke="#efefef" style="stroke: var(--color2, #efefef)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.4884" d="M10.419 14.14l5.61 7.442 4.809-7.442"></path>
+            </symbol>
+            <symbol id="icon-ico1" viewBox="0 0 51 32">
+               <title>ico1</title>
+               <path fill="#ffb507" style="fill: var(--color1, #ffb507)" d="M4.638 0c-2.561 0-4.638 2.076-4.638 4.638v20.322c0 2.561 2.076 4.638 4.638 4.638h31.179c0.415 2.389 3.833 2.806 4.739 0.419l0.159-0.419h6.126c2.561 0 4.638-2.076 4.638-4.638v-20.322c0-2.561-2.076-4.638-4.638-4.638h-42.203z"></path>
+               <path fill="#450064" style="fill: var(--color2, #450064)" d="M25.507 16.991c0 2.579-2.347 4.298-4.999 4.298-2.755 0-5.203-1.719-5.203-4.298 0-1.584 0.714-3.077 1.99-4.66l3.214-4.027h3.877l-1.888 4.751c1.888 0.543 3.010 2.081 3.010 3.936zM36.638 16.991c0 2.579-2.347 4.298-4.999 4.298-2.755 0-5.203-1.719-5.203-4.298 0-1.584 0.714-3.077 1.99-4.66l3.214-4.027h3.877l-1.888 4.751c1.888 0.543 3.010 2.081 3.010 3.936z"></path>
+            </symbol>
+            <symbol id="icon-play" viewBox="0 0 32 32">
+                <title>play</title>
+                <path fill="#ffb507" style="fill: var(--color1, #ffb507)" d="M16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16c-8.837 0-16 7.163-16 16s7.163 16 16 16z"></path>
+                <path fill="#003d2e" style="fill: var(--color2, #003d2e)" d="M23.238 16.381l-12.19 7.619v-15.238l12.19 7.619z"></path>
+            </symbol>
+         </defs>
+      </svg>
+      <div id="fullpage">
+         <!-- <div class="section home">
+            <a class="watchVideo" href="javascript:void(0)">watch video</a>
+            <div class="homeMain">
+               <img class="homeMain__katak-tish" src="./images/katak-tish.svg" alt="">
+               <img src="./images/cankafan.svg" alt="">
+               <img src="./images/asli-maza.svg" alt="">
+               <p>Nothing communicates product freshness quite like opening a beverage can.</p>
+               <img src="./images/silver-can.svg" alt="">
+            </div>
+            </div> -->
 
-    <div id="app">
-        <div>
-            <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <defs>
-                <symbol id="icon-facebok" viewBox="0 0 24 32">
-                <title>facebok</title>
-                <path fill="#ffb507" style="fill: var(--color1, #ffb507)" d="M4.262 10.667h-4.262v5.333h4.262v16h7.103v-16h5.174l0.509-5.333h-5.683v-2.223c0-1.273 0.273-1.777 1.584-1.777h4.099v-6.667h-5.41c-5.109 0-7.376 2.111-7.376 6.153v4.513z"></path>
-                </symbol>
-                <symbol id="icon-instagram" viewBox="0 0 33 32">
-                <title>instagram</title>
-                <path fill="#ffb507" style="fill: var(--color1, #ffb507)" d="M33.144 8.114c-0.242-5.25-2.728-7.759-8.050-8-2.072-0.094-2.694-0.114-7.937-0.114s-5.864 0.020-7.936 0.112c-5.327 0.241-7.806 2.752-8.050 8-0.093 2.059-0.115 2.675-0.115 7.886 0 5.213 0.020 5.829 0.115 7.886 0.242 5.239 2.715 7.759 8.050 8.002 2.070 0.094 2.692 0.114 7.936 0.114 5.247 0 5.865-0.019 7.937-0.114 5.327-0.241 7.806-2.755 8.050-8 0.093-2.057 0.113-2.674 0.113-7.886 0-5.211-0.018-5.829-0.113-7.886zM6.738 15.999c0-5.717 4.665-10.352 10.418-10.352s10.418 4.635 10.418 10.352c0 5.719-4.665 10.354-10.418 10.354s-10.418-4.637-10.418-10.354zM17.156 22.588c-3.661 0-6.63-2.948-6.63-6.588 0-3.638 2.968-6.588 6.63-6.588s6.63 2.95 6.63 6.588c0 3.64-2.968 6.588-6.63 6.588zM25.68 5.647c0-1.039 0.848-1.882 1.895-1.882 1.046 0 1.893 0.843 1.893 1.882s-0.847 1.882-1.893 1.882c-1.047 0-1.895-0.843-1.895-1.882z"></path>
-                </symbol>
-                <symbol id="icon-twitter" viewBox="0 0 40 32">
-                <title>twitter</title>
-                <path fill="#ffb507" style="fill: var(--color1, #ffb507)" d="M13.079 32c15.011 0 23.22-12.31 23.22-22.985 0-0.35-0.007-0.698-0.023-1.044 1.593-1.14 2.978-2.563 4.071-4.183-1.462 0.644-3.036 1.076-4.687 1.272 1.685-1 2.978-2.583 3.589-4.468-1.577 0.925-3.323 1.598-5.182 1.961-1.489-1.57-3.61-2.552-5.957-2.552-4.507 0-8.162 3.618-8.162 8.077 0 0.634 0.072 1.251 0.212 1.842-6.783-0.338-12.798-3.552-16.822-8.44-0.701 1.194-1.105 2.581-1.105 4.060 0 2.802 1.441 5.277 3.632 6.724-1.339-0.041-2.597-0.405-3.696-1.010-0.001 0.034-0.001 0.067-0.001 0.103 0 3.912 2.813 7.179 6.548 7.919-0.686 0.185-1.408 0.284-2.152 0.284-0.525 0-1.037-0.051-1.534-0.146 1.039 3.21 4.052 5.545 7.624 5.611-2.793 2.167-6.312 3.458-10.136 3.458-0.658 0-1.308-0.037-1.947-0.112 3.612 2.292 7.901 3.629 12.51 3.629z"></path>
-                </symbol>
-                <symbol id="icon-minus" viewBox="0 0 144 32">
-                <title>minus</title>
-                <path d="M144 32v-32h-144v32h144z"></path>
-                </symbol>
-                <symbol id="icon-plus" viewBox="0 0 30 32">
-                <title>plus</title>
-                <path d="M29.709 13.3v5.16h-12.12v12.12h-5.16v-12.12h-12.12v-5.16h12.12v-12.12h5.16v12.12h12.12z"></path>
-                </symbol>
-                </defs>
-            </svg>
-            <full-page ref="fullpage" :options="options" id="fullpage">
-                <!-- <div id="section1" class="section">
-                    <a class="watchVideo" href="javascript:void(0)">watch video</a>
-                    <div class="homeMain">
-                        <img class="homeMain__katak-tish" src="./images/katak-tish.svg" alt="">
-                        <img src="./images/cankafan.svg" alt="">
-                        <img src="./images/asli-maza.svg" alt="">
-                        <p>Nothing communicates product freshness quite like opening a beverage can.</p>
-                        <img src="./images/silver-can.svg" alt="">
-                    </div>
-                </div> -->
-                <div id="section2" class="section faq fp-auto-height">
-                    <div class="section-heading">
-                        <h2>We are here to help you</h2>
-                        <p>Browse through the most frequently asked questions.</p>
-                    </div>
-                    <div class="ta-container">
-                        <div class="faq-box">
-                            <div class="faq-box__item" v-on:click="toggleAnswer($event)">
-                                <div class="faq-box__question l-flex l-justify-sb l-align-center">
-                                    <h2>How to share it on Whats app?</h2>
-                                    <a href="javascript:void(0)" class="faq-box__ico-wrap">
-                                        <svg class="faq-box__ico faq-box__ico--plus"> <use xlink:href="#icon-plus"></svg>
-                                        <svg class="faq-box__ico faq-box__ico--minus"> <use xlink:href="#icon-minus"></svg>
-                                    </a>
-                                </div>
-                                <div class="faq-box__answer">
-                                    <div class="faq-box__content">
-                                        <p>Look at the share icon on the website to share it via whats app and other social platforms too</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="faq-box__item" v-on:click="toggleAnswer($event)">
-                                <div class="faq-box__question l-flex l-justify-sb l-align-center">
-                                    <h2>How to share it on Whats app?</h2>
-                                    <a href="javascript:void(0)" class="faq-box__ico-wrap">
-                                        <svg class="faq-box__ico faq-box__ico--plus"> <use xlink:href="#icon-plus"></svg>
-                                        <svg class="faq-box__ico faq-box__ico--minus"> <use xlink:href="#icon-minus"></svg>
-                                    </a>
-                                </div>
-                                <div class="faq-box__answer">
-                                    <div class="faq-box__content">
-                                        <p>Look at the share icon on the website to share it via whats app and other social platforms too</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="faq-box__item" v-on:click="toggleAnswer($event)">
-                                <div class="faq-box__question l-flex l-justify-sb l-align-center">
-                                    <h2>How to share it on Whats app?</h2>
-                                    <a href="javascript:void(0)" class="faq-box__ico-wrap">
-                                        <svg class="faq-box__ico faq-box__ico--plus"> <use xlink:href="#icon-plus"></svg>
-                                        <svg class="faq-box__ico faq-box__ico--minus"> <use xlink:href="#icon-minus"></svg>
-                                    </a>
-                                </div>
-                                <div class="faq-box__answer">
-                                    <div class="faq-box__content">
-                                        <p>Look at the share icon on the website to share it via whats app and other social platforms too</p>
-                                    </div>
-                                </div>
-                            </div>
+        <div class="section video fp-auto-height">
+            <ul class="v-slider">
+                <li>
+                    <div class="l-center v-slider__bg"  
+                    style="background-image: url(./images/video/video-thumbnail.png);">
+                        <div class="v-slider__content">
+                            <h2 class="v-slider__h2">Commercial</h2>
+                            <p>Asli Maza Can Mein Hi Hai</p>
+                            <svg>
+                                <use xlink:href="#icon-play"></use>
+                            </svg>
                         </div>
                     </div>
+                </li>
+                <li>
+                    <div class="l-center v-slider__bg" 
+                    style="background-image: url(./images/video/video-thumbnail.png);">
+                        <div class="v-slider__content">
+                            <h2 class="v-slider__h2">Commercial</h2>
+                            <p>Asli Maza Can Mein Hi Hai</p>
+                            <svg>
+                                <use xlink:href="#icon-play"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="l-center v-slider__bg" 
+                    style="background-image: url(./images/video/video-thumbnail.png);">
+                        <div class="v-slider__content">
+                            <h2 class="v-slider__h2">Commercial</h2>
+                            <p>Asli Maza Can Mein Hi Hai</p>
+                            <svg>
+                                <use xlink:href="#icon-play"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </li>
+             </ul>
+         </div>
+
+         <div class="section about fp-auto-height">
+                <div class="about__content">
+                    <h2 class="about__h2">Aluminium Beverages Can Association of India - ABCAI</h2>
+                    <p class="about__p">Is a first-of-its- kind initiative, to create awareness and promote growth of aluminium beverage packaging as modern, safe, convenient and environment-friendly medium</p>
+                    <img class="about__img" src="./images/about/can.png" alt="">
+                    <p class="about__p">The role of the association is to foster mutually beneficial and positive dialogue within the aluminium beverage packaging ecosystem; the association will act as an intermediary between the industry, the government and the public</p>
                 </div>
-                <!-- <div id="section3" class="section enquiry fp-auto-height">
-                    <h2>Cant find what you’re looking for?</h2>
-                    <p>email your query at cankafan@gmail.com</p>
-                    <form class="enq-form" action="#">
-                        <div class="enq-form__inputWrap">
-                            <input type="text" id="name" name="name" placeholder="Full Name"/>
+         </div>
+         <div class="section testimonial fp-auto-height">
+            <ul class="testi-slider">
+               <li>
+                  <div class="testi-slider__content">
+                     <svg class="testi-slider__svg">
+                        <use xlink:href="#icon-ico1">
+                     </svg>
+                     <p class="testi-slider__text">Was able to save cost and increase production for my units.</p>
+                     <h2 class="testi-slider__name">Rajendra Singh</h2>
+                  </div>
+               </li>
+               <li>
+                  <div class="testi-slider__content">
+                     <svg class="testi-slider__svg">
+                        <use xlink:href="#icon-ico1">
+                     </svg>
+                     <p class="testi-slider__text">Was able to save cost and increase production for my units.</p>
+                     <h2 class="testi-slider__name">Rajendra Singh</h2>
+                  </div>
+               </li>
+               <li>
+                  <div class="testi-slider__content">
+                     <svg class="testi-slider__svg">
+                        <use xlink:href="#icon-ico1">
+                     </svg>
+                     <p class="testi-slider__text">Was able to save cost and increase production for my units.</p>
+                     <h2 class="testi-slider__name">Rajendra Singh</h2>
+                  </div>
+               </li>
+            </ul>
+         </div>
+         <div class="section faq fp-auto-height">
+            <div class="section-heading">
+               <div class="section-heading__content">
+                  <h2>We are here to help you</h2>
+                  <p>Browse through the most frequently asked questions.</p>
+                  <span class="seprator">
+                     <svg class="seprator__svg">
+                        <use xlink:href='#icon-arrow'></use>
+                     </svg>
+                  </span>
+               </div>
+            </div>
+            <div class="ta-container">
+               <div class="faq-box">
+                  <div class="faq-box__item">
+                     <a href="javascript:void(0)">
+                        <div class="faq-box__question l-flex l-justify-sb l-align-center">
+                           <h2>How to share it on Whats app?</h2>
+                           <span class="faq-box__ico-wrap">
+                              <svg class="faq-box__ico faq-box__ico--plus">
+                                 <use xlink:href="#icon-plus">
+                              </svg>
+                              <svg class="faq-box__ico faq-box__ico--minus">
+                                 <use xlink:href="#icon-minus">
+                              </svg>
+                           </span>
                         </div>
-                        <div class="enq-form__inputWrap">
-                            <input type="text" id="email" name="email" placeholder="Email Address"/>
+                     </a>
+                     <div class="faq-box__answer">
+                        <div class="faq-box__content">
+                           <p>Look at the share icon on the website to share it via whats app and other social platforms too</p>
                         </div>
-                        <div class="enq-form__inputWrap">
-                            <input type="text" id="subject" name="subject" placeholder="Mobile Number"/>
+                     </div>
+                  </div>
+                  <div class="faq-box__item">
+                     <a href="javascript:void(0)">
+                        <div class="faq-box__question l-flex l-justify-sb l-align-center">
+                           <h2>How to share it on Facebook?</h2>
+                           <span class="faq-box__ico-wrap">
+                              <svg class="faq-box__ico faq-box__ico--plus">
+                                 <use xlink:href="#icon-plus">
+                              </svg>
+                              <svg class="faq-box__ico faq-box__ico--minus">
+                                 <use xlink:href="#icon-minus">
+                              </svg>
+                           </span>
                         </div>
-                        <div class="enq-form__inputWrap">
-                            <textarea rows="10" cols="20" id="message" name="message" placeholder="Comment"></textarea>
+                     </a>
+                     <div class="faq-box__answer">
+                        <div class="faq-box__content">
+                           <p>Look at the share icon on the website to share it via whats app and other social platforms too</p>
                         </div>
-                        <a class="enq-form__submit" href="#">Submit</a>
-                    </form>
-                </div> -->
-                <!-- <div class="section footer fp-auto-height">
-                    <div class="l-flex l-align-center l-justify-sb">
-                        <div class="followus-wrapper">
-                            <p class="followus-wrapper__text">Follow us:</p>
-                            <ul class="followus-links">
-                                <li>
-                                    <svg class="followus-links__svg"><use xlink:href="#icon-facebok"></use></svg>
-                                </li>
-                                <li>
-                                    <svg class="followus-links__svg"><use xlink:href="#icon-instagram"></use></svg>
-                                </li>
-                                <li>
-                                    <svg class="followus-links__svg"><use xlink:href="#icon-twitter"></use></svg>
-                                </li>
-                            </ul>
+                     </div>
+                  </div>
+                  <div class="faq-box__item">
+                     <a href="javascript:void(0)">
+                        <div class="faq-box__question l-flex l-justify-sb l-align-center">
+                           <h2>Is it better than glass?</h2>
+                           <span class="faq-box__ico-wrap">
+                              <svg class="faq-box__ico faq-box__ico--plus">
+                                 <use xlink:href="#icon-plus">
+                              </svg>
+                              <svg class="faq-box__ico faq-box__ico--minus">
+                                 <use xlink:href="#icon-minus">
+                              </svg>
+                           </span>
                         </div>
-                        <ul class="footer-links">
-                            <li>Terms & Condition</li>
-                            <li>Privacy Policy</li>
-                            <li>Disclaimer</li>
-                        </ul>
-                    </div>
-                </div> -->
-          </full-page>
-        </div>
-    </div>
-
-    <!-- production mode -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
-
-    <!-- Development mode -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
-
-    <script src="https://unpkg.com/vue-fullpage.js/dist/vue-fullpage.min.js"></script>
-
-    <script>
-        new Vue({
-            el: '#app',
-            name: 'app',
-            data() {
-                return {
-                    options: {
-                        afterLoad: this.afterLoad,
-                        fitToSection:false
-                    },
-                }
-            },
-            methods:{
-                // afterLoad:function(origin, destination, direction){
-                //     if(destination.index >= 2){
-                //         // this.$refs.fullpage.api.setAutoScrolling(false);
-                //         console.log('normal scroll')
-                //     }else{
-                //         console.log('section scroll')
-                //     }
-                // },
-                toggleAnswer: (e) => {
-                    console.log(e)
-                },
-                // toggleAnswer() {
-                //     console.log(this);
-                // }
-            }
-        });
-    </script>
-</body>
+                     </a>
+                     <div class="faq-box__answer">
+                        <div class="faq-box__content">
+                           <p>Look at the share icon on the website to share it via whats app and other social platforms too</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="faq-box__item">
+                     <a href="javascript:void(0)">
+                        <div class="faq-box__question l-flex l-justify-sb l-align-center">
+                           <h2>How is it made?</h2>
+                           <span class="faq-box__ico-wrap">
+                              <svg class="faq-box__ico faq-box__ico--plus">
+                                 <use xlink:href="#icon-plus">
+                              </svg>
+                              <svg class="faq-box__ico faq-box__ico--minus">
+                                 <use xlink:href="#icon-minus">
+                              </svg>
+                           </span>
+                        </div>
+                     </a>
+                     <div class="faq-box__answer">
+                        <div class="faq-box__content">
+                           <p>Look at the share icon on the website to share it via whats app and other social platforms too</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="section enquiry fp-auto-height">
+            <h2>Cant find what you’re looking for?</h2>
+            <p>email your query at cankafan@gmail.com</p>
+            <form class="enq-form" action="#">
+               <div class="enq-form__inputWrap">
+                  <input type="text" id="name" name="name" placeholder="Full Name"/>
+               </div>
+               <div class="enq-form__inputWrap">
+                  <input type="text" id="email" name="email" placeholder="Email Address"/>
+               </div>
+               <div class="enq-form__inputWrap">
+                  <input type="text" id="subject" name="subject" placeholder="Mobile Number"/>
+               </div>
+               <div class="enq-form__inputWrap">
+                  <textarea rows="10" cols="20" id="message" name="message" placeholder="Comment"></textarea>
+               </div>
+               <a class="enq-form__submit" href="#">Submit</a>
+            </form>
+         </div>
+         <div class="section footer fp-auto-height">
+            <div class="l-flex l-align-center l-justify-sb">
+               <div class="followus-wrapper">
+                  <p class="followus-wrapper__text">Follow us:</p>
+                  <ul class="followus-links">
+                     <li>
+                        <svg class="followus-links__svg">
+                           <use xlink:href="#icon-facebok"></use>
+                        </svg>
+                     </li>
+                     <li>
+                        <svg class="followus-links__svg">
+                           <use xlink:href="#icon-instagram"></use>
+                        </svg>
+                     </li>
+                     <li>
+                        <svg class="followus-links__svg">
+                           <use xlink:href="#icon-twitter"></use>
+                        </svg>
+                     </li>
+                  </ul>
+               </div>
+               <ul class="footer-links">
+                  <li>Terms & Condition</li>
+                  <li>Privacy Policy</li>
+                  <li>Disclaimer</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <script
+         src="https://code.jquery.com/jquery-3.4.1.js"
+         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+         crossorigin="anonymous"></script>
+      <script 
+         src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js" 
+         integrity="sha256-SNaaqfQPa0XlEqQDrsurQ+Qq5XnhNrwHQXnZpdXlCEI=" 
+         crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
+      <script src="./js/script.js"></script>
+   </body>
 </html>

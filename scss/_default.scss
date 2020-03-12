@@ -1,5 +1,5 @@
 // for all elements
-*{ margin: 0; padding: 0; text-decoration: none; outline: none; color: inherit; font-style: normal; font-weight: normal; font-family: inherit; line-height: 1.6;}
+*{ box-sizing: border-box; margin: 0; padding: 0; text-decoration: none; outline: none; color: inherit; font-style: normal; font-weight: normal; font-family: inherit; line-height: 1.6;}
 // for all elements
 
 // code elements
@@ -16,6 +16,7 @@ section{ padding-left: 15px; padding-right: 15px; }
 .l-justify-center{ justify-content: center; }
 .l-justify-end{ justify-content: flex-end;}
 .l-justify-sb{ justify-content: space-between; }
+.l-center{ display: flex; justify-content: center; align-items: center; }
 // layout
 
 // placeholder
