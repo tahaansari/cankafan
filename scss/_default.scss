@@ -7,6 +7,7 @@ ul{ list-style: none; }
 img{ max-width: 100%; }
 p+p{ margin-top: 5px; }
 section{ padding-left: 15px; padding-right: 15px; }
+strong{ font-weight: bold; }
 // code elements
 
 // layout
@@ -24,3 +25,8 @@ section{ padding-left: 15px; padding-right: 15px; }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */ color: #ACACAC; }
 ::placeholder { color: #ACACAC; }
 // placeholder
+
+
+.clear-float{
+    clear: both;
+}

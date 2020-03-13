@@ -1,6 +1,6 @@
 body{ 
     font-family: 'Mukta', sans-serif; 
-    font-size: 100%; 
+    font-size: 120%; 
     @media(min-width:768px){
         font-size: 137.5%;
     }
@@ -10,38 +10,112 @@ h1,h2,h3,h4,h5,h6{ font-weight: bold; }
 h2{ font-size: 1.36em; }
 .section{ padding-left: 15px; padding-right: 15px; }
 
-.home{ background: url(../images/purplebg.jpg) no-repeat center/cover; }
-
 ::-webkit-input-placeholder { /* Edge */font-weight: bold; color: #ACACAC; font-size: 100%; }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */font-weight: bold; color: #ACACAC; font-size: 100%; }
 ::placeholder { font-weight: bold; color: #ACACAC; font-size: 100%; }
 
-.watchVideo{
+.watch-video{
     position: fixed;
     right: 0;
     top: 5%;
-    transform: translateX(calc(100% - 60px));
-    background: #FFB507 url(../images/Triangle.svg) no-repeat 28px center/15px;
-    padding: 18px 60px;
+    z-index: 1;
+    transform: translateX(calc(100% - 50px));
+    background: #FFB507 url(../images/Triangle.svg) no-repeat 22px center/15px;
+    padding: 14px 50px;
     border-top-left-radius: 60px;
     border-bottom-left-radius: 60px;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: .72em;
     transition: .1s;
-    &.open{
+    &.is-active{
         transform: translateX(0);
-        padding: 18px 40px;
+        padding: 14px 40px;
         background-size: 0;
     }
 }
-.homeMain{
+.scroll-to{
+    position: fixed;
+    right: 5%;
+    bottom: 3%;
+    z-index: 1;
     color: #ffffff;
-    img{ display: block; margin: auto; }
-    &__katak-tish{
-        position: absolute;
-        top: 5%;
-        left: 5%;
+    text-align: center;
+    font-size: .72em;
+    strong{  display: block; }
+    &__svg{
+        width: 60px;
+        height: 60px;
+        transform: translateY(-20px);
+        transition: .2s;
+        margin-bottom: 5px;
+        animation: scroll-to 2s linear infinite;
     }
+    @keyframes scroll-to {
+        0%{
+            transform: translateY(-20px);
+        }
+        50%{
+            transform: translateY(0px);
+        }
+        100%{
+            transform: translateY(-20px);
+        }
+    }
+    @media(min-width: 768px){
+        bottom: auto;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+
+.home{
+    background:#450064;
+    color: #ffffff;
+    text-align: center;
+    &__katak-tish{ 
+        float: left;
+        margin-top: 4%;
+        margin-bottom: 4%;
+    }
+    &__cankafan{ 
+        font-size: 0; 
+        margin-bottom: 20px;
+    }
+    &__asli-maza{ 
+        font-size: 0; 
+        margin-bottom: 20px;
+    }
+    &__text{
+        margin-bottom: 20px;
+    }
+    @media(min-width: 768px){
+        &__text{
+            width: 444px;
+            margin-left: auto;
+            margin-right: auto;
+        }        
+    }
+}
+.partners{ 
+    background: #01A09B;
+    &__heading{
+        margin-bottom: 20px;
+    }
+    &__text{
+        margin-bottom: 30px;
+    }
+    &__img{
+        text-align: center;
+    }
+    @media(min-width:768px){
+        &__content{
+            width: 542px;
+            margin: auto;
+        }
+        text-align: center;
+    }    
 }
 .footer{ 
     background-color: #02204E; 
@@ -376,3 +450,19 @@ h2{ font-size: 1.36em; }
     }
 }
 // VIDEO SECTION
+
+
+.fayde{
+    background: #E4C268;
+    &__can{
+        position: relative;
+        display: inline-block;
+    }
+    &__hotspot{
+        position: absolute;
+    }
+    &__svg{
+        width: 100px;
+        height: 100px;
+    }
+}

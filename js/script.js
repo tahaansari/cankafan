@@ -27,4 +27,7 @@ $(document).ready(function() {
         // prevArrow: $('.prev'),
         // nextArrow: $('.next')
     })
+    $('.watch-video').click(function(){
+        $(this).toggleClass('is-active');
+    })
 });
