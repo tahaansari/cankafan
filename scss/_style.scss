@@ -297,6 +297,9 @@ h2{ font-size: 1.36em; }
     //     max-width: 328px;
     // }
 }
+
+
+// VIDEO SECTION
 .video{
     padding-left: 0;
     padding-right: 0;
@@ -308,24 +311,68 @@ h2{ font-size: 1.36em; }
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        padding-top: 200px;
+        padding-bottom: 200px;
         &:before{
             content: "";
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.9);
             position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
         }
     }
     &__content{
         position: relative;
-        padding-top: 150px;
-        padding-bottom: 150px;
+        padding: 0 15px;
+        @media(min-width: 768px){
+            width: 516px;
+            margin: auto;
+        }
     }
-    // &__h2{
-    //     position: relative;
-    //     &:before{
-    //         content: "";
-    //         position: absolute;
-    //     }
-    // }
+    &__h2{
+        position: relative;
+        margin-bottom: 14px;
+        padding-bottom: 8px;
+        &:before{
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 100px;
+            background: #ffffff;
+            bottom: 0;
+        }
+    }
+    &__play-wrap{
+        display: block;
+        float: right;
+        font-size: 0;
+        position: relative;
+        z-index: 1;
+    }
+    &__play{
+        width: 44px;
+        height: 44px;
+        @media(min-width:768px){
+            width: 64px;
+            height: 64px;
+        }
+    }
+    &__arrows{
+        position: absolute;
+        bottom: 150px;
+        left: 50%;
+        transform: translateX(50%);
+        display: flex;
+    }
+    &__prev{
+        width: 50px;
+        height: 50px;
+    }
+    &__next{
+        width: 50px;
+        height: 50px;
+    }
 }
+// VIDEO SECTION

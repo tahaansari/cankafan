@@ -46,9 +46,19 @@
                <path fill="#450064" style="fill: var(--color2, #450064)" d="M25.507 16.991c0 2.579-2.347 4.298-4.999 4.298-2.755 0-5.203-1.719-5.203-4.298 0-1.584 0.714-3.077 1.99-4.66l3.214-4.027h3.877l-1.888 4.751c1.888 0.543 3.010 2.081 3.010 3.936zM36.638 16.991c0 2.579-2.347 4.298-4.999 4.298-2.755 0-5.203-1.719-5.203-4.298 0-1.584 0.714-3.077 1.99-4.66l3.214-4.027h3.877l-1.888 4.751c1.888 0.543 3.010 2.081 3.010 3.936z"></path>
             </symbol>
             <symbol id="icon-play" viewBox="0 0 32 32">
-                <title>play</title>
-                <path fill="#ffb507" style="fill: var(--color1, #ffb507)" d="M16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16c-8.837 0-16 7.163-16 16s7.163 16 16 16z"></path>
-                <path fill="#003d2e" style="fill: var(--color2, #003d2e)" d="M23.238 16.381l-12.19 7.619v-15.238l12.19 7.619z"></path>
+               <title>play</title>
+               <path fill="#ffb507" style="fill: var(--color1, #ffb507)" d="M16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16c-8.837 0-16 7.163-16 16s7.163 16 16 16z"></path>
+               <path fill="#003d2e" style="fill: var(--color2, #003d2e)" d="M23.238 16.381l-12.19 7.619v-15.238l12.19 7.619z"></path>
+            </symbol>
+            <symbol id="icon-prev" viewBox="0 0 30 32">
+               <title>prev</title>
+               <path fill="#ffb507" style="fill: var(--color1, #ffb507)" d="M2.712 13.831c0-7.3 5.918-13.217 13.217-13.217h11.732v26.435h-11.732c-7.3 0-13.217-5.918-13.217-13.217v0z"></path>
+               <path fill="none" stroke="#003d2e" style="stroke: var(--color2, #003d2e)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6271" d="M21.246 6.874l-7.841 7.492 7.841 6.421"></path>
+            </symbol>
+            <symbol id="icon-next" viewBox="0 0 30 32">
+               <title>next</title>
+               <path fill="#ffb507" style="fill: var(--color1, #ffb507)" d="M27.661 13.831c0-7.3-5.918-13.217-13.217-13.217h-11.732v26.435h11.732c7.3 0 13.217-5.918 13.217-13.217v0z"></path>
+               <path fill="none" stroke="#003d2e" style="stroke: var(--color2, #003d2e)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6271" d="M9.127 6.874l7.841 7.492-7.841 6.421"></path>
             </symbol>
          </defs>
       </svg>
@@ -62,58 +72,78 @@
                <p>Nothing communicates product freshness quite like opening a beverage can.</p>
                <img src="./images/silver-can.svg" alt="">
             </div>
-            </div> -->
-
-        <div class="section video fp-auto-height">
+         </div> -->
+         <div class="section video fp-auto-height">
             <ul class="v-slider">
-                <li>
-                    <div class="l-center v-slider__bg"  
-                    style="background-image: url(./images/video/video-thumbnail.png);">
-                        <div class="v-slider__content">
-                            <h2 class="v-slider__h2">Commercial</h2>
-                            <p>Asli Maza Can Mein Hi Hai</p>
-                            <svg>
-                                <use xlink:href="#icon-play"></use>
-                            </svg>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="l-center v-slider__bg" 
-                    style="background-image: url(./images/video/video-thumbnail.png);">
-                        <div class="v-slider__content">
-                            <h2 class="v-slider__h2">Commercial</h2>
-                            <p>Asli Maza Can Mein Hi Hai</p>
-                            <svg>
-                                <use xlink:href="#icon-play"></use>
-                            </svg>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="l-center v-slider__bg" 
-                    style="background-image: url(./images/video/video-thumbnail.png);">
-                        <div class="v-slider__content">
-                            <h2 class="v-slider__h2">Commercial</h2>
-                            <p>Asli Maza Can Mein Hi Hai</p>
-                            <svg>
-                                <use xlink:href="#icon-play"></use>
-                            </svg>
-                        </div>
-                    </div>
-                </li>
-             </ul>
+               <li>
+                  <div class="v-slider__bg"  
+                     style="background-image: url(./images/video/video-thumbnail.png);">
+                     <div class="v-slider__content">
+                        <a class="v-slider__play-wrap" href="javascript:void(0)">
+                           <svg class="v-slider__play">
+                              <use xlink:href="#icon-play"></use>
+                           </svg>
+                        </a>
+                        <h2 class="v-slider__h2">Commercial</h2>
+                        <p>Asli Maza Can Mein Hi Hai</p>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="v-slider__bg" 
+                     style="background-image: url(./images/video/video-thumbnail.png);">
+                     <div class="v-slider__content">
+                        <a class="v-slider__play-wrap" href="javascript:void(0)">
+                           <svg class="v-slider__play">
+                              <use xlink:href="#icon-play"></use>
+                           </svg>
+                        </a>
+                        <h2 class="v-slider__h2">Commercial</h2>
+                        <p>Asli Maza Can Mein Hi Hai</p>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="v-slider__bg" 
+                     style="background-image: url(./images/video/video-thumbnail.png);">
+                     <div class="v-slider__content">
+                        <a class="v-slider__play-wrap" href="javascript:void(0)">
+                           <svg class="v-slider__play">
+                              <use xlink:href="#icon-play"></use>
+                           </svg>
+                        </a>
+                        <h2 class="v-slider__h2">Commercial</h2>
+                        <p>Asli Maza Can Mein Hi Hai</p>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+            <!-- <ul class="v-slider__arrows">
+               <li>
+                  <a href="javascript:void(0)" class="prev">
+                     <svg class="v-slider__prev">
+                        <use xlink:href="#icon-prev"></use>
+                     </svg>
+                  </a>
+               </li>
+               <li>
+                  <a href="javascript:void(0)" class="next">
+                     <svg class="v-slider__next">
+                        <use xlink:href="#icon-next"></use>
+                     </svg>
+                  </a>
+               </li>
+            </ul> -->
          </div>
-
-         <div class="section about fp-auto-height">
-                <div class="about__content">
-                    <h2 class="about__h2">Aluminium Beverages Can Association of India - ABCAI</h2>
-                    <p class="about__p">Is a first-of-its- kind initiative, to create awareness and promote growth of aluminium beverage packaging as modern, safe, convenient and environment-friendly medium</p>
-                    <img class="about__img" src="./images/about/can.png" alt="">
-                    <p class="about__p">The role of the association is to foster mutually beneficial and positive dialogue within the aluminium beverage packaging ecosystem; the association will act as an intermediary between the industry, the government and the public</p>
-                </div>
-         </div>
-         <div class="section testimonial fp-auto-height">
+         <!-- <div class="section about fp-auto-height">
+            <div class="about__content">
+               <h2 class="about__h2">Aluminium Beverages Can Association of India - ABCAI</h2>
+               <p class="about__p">Is a first-of-its- kind initiative, to create awareness and promote growth of aluminium beverage packaging as modern, safe, convenient and environment-friendly medium</p>
+               <img class="about__img" src="./images/about/can.png" alt="">
+               <p class="about__p">The role of the association is to foster mutually beneficial and positive dialogue within the aluminium beverage packaging ecosystem; the association will act as an intermediary between the industry, the government and the public</p>
+            </div>
+         </div> -->
+         <!-- <div class="section testimonial fp-auto-height">
             <ul class="testi-slider">
                <li>
                   <div class="testi-slider__content">
@@ -143,8 +173,8 @@
                   </div>
                </li>
             </ul>
-         </div>
-         <div class="section faq fp-auto-height">
+         </div> -->
+         <!-- <div class="section faq fp-auto-height">
             <div class="section-heading">
                <div class="section-heading__content">
                   <h2>We are here to help you</h2>
@@ -240,8 +270,8 @@
                   </div>
                </div>
             </div>
-         </div>
-         <div class="section enquiry fp-auto-height">
+         </div> -->
+         <!-- <div class="section enquiry fp-auto-height">
             <h2>Cant find what you’re looking for?</h2>
             <p>email your query at cankafan@gmail.com</p>
             <form class="enq-form" action="#">
@@ -259,36 +289,48 @@
                </div>
                <a class="enq-form__submit" href="#">Submit</a>
             </form>
-         </div>
-         <div class="section footer fp-auto-height">
+         </div> -->
+         <!-- <div class="section footer fp-auto-height">
             <div class="l-flex l-align-center l-justify-sb">
                <div class="followus-wrapper">
                   <p class="followus-wrapper__text">Follow us:</p>
                   <ul class="followus-links">
                      <li>
-                        <svg class="followus-links__svg">
-                           <use xlink:href="#icon-facebok"></use>
-                        </svg>
+                        <a href="javascript:void(0)">
+                           <svg class="followus-links__svg">
+                              <use xlink:href="#icon-facebok"></use>
+                           </svg>
+                        </a>
                      </li>
                      <li>
-                        <svg class="followus-links__svg">
-                           <use xlink:href="#icon-instagram"></use>
-                        </svg>
+                        <a href="javascript:void(0)">
+                           <svg class="followus-links__svg">
+                              <use xlink:href="#icon-instagram"></use>
+                           </svg>
+                        </a>
                      </li>
                      <li>
-                        <svg class="followus-links__svg">
-                           <use xlink:href="#icon-twitter"></use>
-                        </svg>
+                        <a href="javascript:void(0)">
+                           <svg class="followus-links__svg">
+                              <use xlink:href="#icon-twitter"></use>
+                           </svg>
+                        </a>
                      </li>
                   </ul>
                </div>
                <ul class="footer-links">
-                  <li>Terms & Condition</li>
-                  <li>Privacy Policy</li>
-                  <li>Disclaimer</li>
+                  <li>
+                     <a href="javascript:void(0)">Terms & Condition</a>
+                  </li>
+                  <li>
+                     <a href="javascript:void(0)">Privacy Policy</a>
+                  </li>
+                  <li>
+                     <a href="javascript:void(0)">Disclaimer</a>
+                  </li>
                </ul>
             </div>
-         </div>
+         </div> -->
       </div>
       <script
          src="https://code.jquery.com/jquery-3.4.1.js"
