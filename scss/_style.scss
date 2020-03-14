@@ -464,6 +464,8 @@ h2{ font-size: 1.36em; }
         position: relative;
     }
     &__can-wrap{
+        transition: .2s;
+        transform: rotate(-12deg);
         text-align: center;
     }
     &__content{
@@ -532,6 +534,7 @@ h2{ font-size: 1.36em; }
 
 
 .overlay{
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -542,6 +545,7 @@ h2{ font-size: 1.36em; }
 }
 
 .faydepop{
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
