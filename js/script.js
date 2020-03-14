@@ -30,4 +30,7 @@ $(document).ready(function() {
     $('.watch-video').click(function(){
         $(this).toggleClass('is-active');
     })
+    $('.fayde__hotspot').click(function(){
+        alert('clicked');
+    })
 });
