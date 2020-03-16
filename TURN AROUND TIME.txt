@@ -14,4 +14,3 @@ TO TARGET MOBILE DEVICE FIRST
 mobile first approach
 
 No breakpoint for future ready code
-
