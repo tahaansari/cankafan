@@ -10,9 +10,74 @@
          integrity="sha256-27KRQA6ck6EiKWEkCpHR2NcEeAYnqz8Q5a83PYHh1z0=" 
          crossorigin="anonymous" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" />
-      <link rel="stylesheet" href="./css/includes.min.css"> 
+      <link rel="stylesheet" href="./css/includes.min.css">
    </head>
    <body>
+      <!-- <div class="preloader">
+         <div>
+            <img class="home__splash-logo" src="./images/splash-logo.png" alt="">
+            loading...
+         </div>
+      </div> -->
+      <div class="overlay"></div>
+      <div class="v-player">
+         <div id="player"></div>
+      </div>
+      <div data-popup="hotspot1" class="faydepop">
+         <svg class="faydepop__svg">
+            <use xlink:href="#icon-icon"></use>
+         </svg>
+         <div class="faydepop__desc">
+            <p><strong>Infinitely recyclable so the environment is safe and you get to enjoy your drink, it's a win-win!</strong></p>
+         </div>
+         <svg class="faydepop__close-svg">
+            <use xlink:href="#icon-close"></use>
+         </svg>
+      </div>
+      <div data-popup="hotspot2" class="faydepop">
+         <svg class="faydepop__svg">
+            <use xlink:href="#icon-icon"></use>
+         </svg>
+         <div class="faydepop__desc">
+            <p><strong>Infinitely recyclable so the environment is safe and you get to enjoy your drink, it's a win-win!</strong></p>
+         </div>
+         <svg class="faydepop__close-svg">
+            <use xlink:href="#icon-close"></use>
+         </svg>
+      </div>
+      <div data-popup="hotspot3" class="faydepop">
+         <svg class="faydepop__svg">
+            <use xlink:href="#icon-icon"></use>
+         </svg>
+         <div class="faydepop__desc">
+            <p><strong>Infinitely recyclable so the environment is safe and you get to enjoy your drink, it's a win-win!</strong></p>
+         </div>
+         <svg class="faydepop__close-svg">
+            <use xlink:href="#icon-close"></use>
+         </svg>
+      </div>
+      <div data-popup="hotspot4" class="faydepop">
+         <svg class="faydepop__svg">
+            <use xlink:href="#icon-icon"></use>
+         </svg>
+         <div class="faydepop__desc">
+            <p><strong>Infinitely recyclable so the environment is safe and you get to enjoy your drink, it's a win-win!</strong></p>
+         </div>
+         <svg class="faydepop__close-svg">
+            <use xlink:href="#icon-close"></use>
+         </svg>
+      </div>
+      <div data-popup="hotspot5" class="faydepop">
+         <svg class="faydepop__svg">
+            <use xlink:href="#icon-icon"></use>
+         </svg>
+         <div class="faydepop__desc">
+            <p><strong>Infinitely recyclable so the environment is safe and you get to enjoy your drink, it's a win-win!</strong></p>
+         </div>
+         <svg class="faydepop__close-svg">
+            <use xlink:href="#icon-close"></use>
+         </svg>
+      </div>
       <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
          <defs>
             <symbol id="icon-facebok" viewBox="0 0 24 32">
@@ -67,11 +132,16 @@
                <path fill="none" stroke="#efefef" style="stroke: var(--color2, #efefef)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.7273" d="M5.818 15.273l4.699 5.091 4.028-5.091"></path>
                <path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.4545" d="M0.727 15.273v7c0 0 2.036 8 10.182 9"></path>
                <path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.4545" d="M19.636 15.273v7c0 0-1.891 8-9.455 9"></path>
-               </symbol>
+            </symbol>
             <symbol id="icon-hotspot" viewBox="0 0 47 32">
                <title>hotspot</title>
-               <path fill="#d8d8d8" style="fill: var(--color1, #d8d8d8)" d="M15.714 0.36h15.474c8.62 0 15.608 6.988 15.608 15.608v-0c0 8.62-6.988 15.608-15.608 15.608h-15.474c-8.62 0-15.608-6.988-15.608-15.608v0c0-8.62 6.988-15.608 15.608-15.608z"></path>
-               <path fill="#02204e" style="fill: var(--color2, #02204e)" d="M32.228 22.54v-5.573h5.558v-1.707h-5.558v-5.573h-1.702v5.573h-5.558v1.707h5.558v5.573h1.702z"></path>
+               <path fill="#d8d8d8" d="M15.714 0.36h15.474c8.62 0 15.608 6.988 15.608 15.608v-0c0 8.62-6.988 15.608-15.608 15.608h-15.474c-8.62 0-15.608-6.988-15.608-15.608v0c0-8.62 6.988-15.608 15.608-15.608z"></path>
+               <path fill="#02204e" d="M32.228 22.54v-5.573h5.558v-1.707h-5.558v-5.573h-1.702v5.573h-5.558v1.707h5.558v5.573h1.702z"></path>
+            </symbol>
+            <symbol id="icon-hotspot-active" viewBox="0 0 47 32">
+               <title>hotspot</title>
+               <path fill="#FFB507" d="M15.714 0.36h15.474c8.62 0 15.608 6.988 15.608 15.608v-0c0 8.62-6.988 15.608-15.608 15.608h-15.474c-8.62 0-15.608-6.988-15.608-15.608v0c0-8.62 6.988-15.608 15.608-15.608z"></path>
+               <path fill="#02204e" d="M32.228 22.54v-5.573h5.558v-1.707h-5.558v-5.573h-1.702v5.573h-5.558v1.707h5.558v5.573h1.702z"></path>
             </symbol>
             <symbol id="icon-icon" viewBox="0 0 45 32">
                <title>icon</title>
@@ -102,7 +172,7 @@
                <path fill="#fff" style="fill: var(--color1, #fff)" d="M17.623 21.809l-1.834-5.213 1.055-0.793-0.993-2.904-4.117 3.362 0.962 2.611 0.954-0.735 1.797 4.996 2.175-1.323z"></path>
                <path fill="#fff" style="fill: var(--color1, #fff)" d="M20.734 16.379l-0.441 0.284-0.183-1.348 0.623 1.065zM18.35 21.075l2.352-1.401-0.182-1.345 0.993-0.62 0.643 1.099 2.731-1.627-5.009-7.825-2.672 2.138 1.145 9.582z"></path>
                <path fill="#fff" style="fill: var(--color1, #fff)" d="M30.336 1.104l-3.528 2.796-0.346 3.622-0.809-2.707-2.987 2.367 3.013 9.503 3.009-1.776-0.73-2.469 1.848 1.816 3.547-2.093-4.005-3.675 0.988-7.385z"></path>
-               <path fill="#fff" style="fill: var(--color1, #fff)" d="M16.918 9.002l-12.744 11.825 13.357-10.858-0.613-0.967z"></path>
+               <path fill="#fff" style="fill: var(--color1, rgb(20, 18, 18))" d="M16.918 9.002l-12.744 11.825 13.357-10.858-0.613-0.967z"></path>
                <path fill="#fff" style="fill: var(--color1, #fff)" d="M37.585 22.060l0.705-1.239-13.253 4.889 12.548-3.65z"></path>
                <path fill="#fff" style="fill: var(--color1, #fff)" d="M39.048 7.28l-5.393 4.725 6.047-3.56-0.655-1.164z"></path>
                <path fill="#fff" style="fill: var(--color1, #fff)" d="M19.114 22.141l0.205 4.975 1.213-0.485-0.257-5.221-1.161 0.731z"></path>
@@ -111,23 +181,23 @@
                <path fill="#fff" style="fill: var(--color1, #fff)" d="M33.214 21.901l0.415-8.391-2.218 1.378-0.090 2.685-0.681 0.373 0.060-2.617-1.912 1.188-0.054 7.148 1.805-0.711 0.050-2.877 0.613-0.291-0.051 2.927 2.061-0.812z"></path>
                <path fill="#fff" style="fill: var(--color1, #fff)" d="M26.096 24.388l1.667-0.591 0.044-6.773-1.792 1.005 0.037 2.179-0.523 0.258-0.037-2.144-1.54 0.864 0.152 5.906 1.446-0.513-0.022-2.152 0.522-0.224 0.045 2.186z"></path>
                <path fill="#fff" style="fill: var(--color1, #fff)" d="M21.152 26.545l2.047-0.816c0.61-0.243 0.655-0.876 0.655-0.876l-0.067-2.161c-0.044-0.676-0.611-0.461-0.611-0.461l-0.838 0.458c-0.247 0.116-0.226-0.093-0.226-0.093l-0.019-0.23 1.67-0.925-0.048-2.080-2.464 1.548c-0.317 0.242-0.333 0.729-0.333 0.729l0.139 2.116c0.068 0.511 0.475 0.271 0.475 0.271l0.798-0.391c0.237-0.116 0.223 0.099 0.223 0.099l0.013 0.222-1.499 0.718 0.085 1.873z"></path>
-               </symbol>
+            </symbol>
          </defs>
       </svg>
       <div class="header">
-         <div class="header__katak-tish">
-            <img src="./images/katak-tish.png" alt="">
+         <div class="header__left">
+            <img class="header__katak-tish" src="./images/katak-tish.png" alt="">
          </div>
-         <div class="header__cankafan"> 
-            <img src="./images/cankafan.png" alt="">
+         <div class="header__center">
+            <img class="header__cankafan" src="./images/cankafan.png" alt="">
          </div>
-         <div class="header__watch-video">
-            <a href="javascript:void(0)">
+         <div class="header__right">
+            <a class="header__watch-video" href="javascript:void(0)">
                <svg class="header__play-svg">
                   <use xlink:href="#icon-play"></use>
                </svg>
                <span> watch video </span>
-            </a>
+            </a>   
          </div>
       </div>
       <a class="scroll-to" href="javascript:void(0)">
@@ -135,41 +205,44 @@
             <use xlink:href="#icon-scroll"></use>
          </svg>
          <strong>
-            SCROLL TO <br>
-            EXPERIENCE
+         SCROLL TO <br>
+         EXPERIENCE
          </strong>
       </a>
       <div id="fullpage">
-         <div class="section home">
-
-            <!-- <div class="splash-screen">
+         <div class="section home fp-noscroll">
+            <video autoplay loop autobuffer muted playsinline>
+               <source src="smoke.mp4" type="video/mp4">
+               Your browser does not support HTML5 video.
+            </video>
+            <audio id="myAudio">
+               <source src="katak-thishh.mp3" type="audio/mpeg">
+               Your browser does not support the audio element.
+            </audio>
+            <div class="splash-screen">
                <img class="home__splash-logo" src="./images/splash-logo.png" alt="">
                <a href="javascript:void(0)" class="home__btn">
-                  EXPERIENCE THE MOMENT
+               EXPERIENCE THE MOMENT
                </a> 
-            </div> -->
-
+            </div>
             <div class="home-screen">
                <img class="home__asli-maza" src="./images/asli-maza.png" alt="">
                <div class="home__text">
-                  <strong>Nothing communicates product freshness quite like opening a beverage can.</strong>
+                  <p><strong>Nothing communicates product freshness quite like opening a beverage can.</strong></p>
                </div>
             </div>
-            
             <div class="home__animate-wrap">
-               <!-- <img class="home__smoke" src="./images/smoke.gif" alt=""> -->
-               <!-- <img class="home__smoke" src="./images/smoke.png" alt=""> -->
                <div class="home__katak-wrap">
-                  <img class="home__can home__can--closed" src="./images/closed-can.png" alt="">
+                  <img class="home__can home__can--closed" src="./images/open-can.png" alt="">
                   <img class="home__can home__can--open" src="./images/open-can.png" alt="">
-                  <svg class="home__katak-tishhh">
-                     <use xlink:href="#icon-katak-tishhh"></use>
-                  </svg>  
+                  <div class="home__katak-tishhh">
+                     <img src="./images/katak-tishhh.svg" alt="">
+                  </div>
                </div>
             </div>
-
          </div>
          <div class="section partners">
+            <img class="partners__left-can" src="./images/partners/can.png" alt="">
             <div class="partners__content">
                <h2 class="partners__heading">An Unmatched combination of high strenght & light weight</h2>
                <div class="partners__text">
@@ -179,117 +252,51 @@
                   <img src="./images/partners/partners.png" alt="">
                </div>
             </div>
+            <img class="partners__right-can" src="./images/partners/can.png" alt="">
          </div>
          <div class="section fayde">
             <div class="fayde__wrap">
-               <!-- <div class="fayde__content-wrap"> -->
-                  <div class="fayde__content">
-                     <h2 class="fayde__heading">Can Ke 5 Fayde</h2>
-                     <p>Click on the hotspot</p>
-                  </div>
-               <!-- </div> -->
-               <!-- <div class="fayde__can-wrap"> -->
-                  <div class="fayde__can">
-                     <a id="hotspot1" href="javascript:void(0)" class="fayde__hotspot fayde__hotspot--one">
-                        <svg class="fayde__svg">
-                           <use xlink:href="#icon-hotspot"></use>
-                        </svg>
-                     </a>
-                     <a id="hotspot2" href="javascript:void(0)" class="fayde__hotspot fayde__hotspot--two">
-                        <svg class="fayde__svg">
-                           <use xlink:href="#icon-hotspot"></use>
-                        </svg>
-                     </a>
-                     <a id="hotspot3" href="javascript:void(0)" class="fayde__hotspot fayde__hotspot--three">
-                        <svg class="fayde__svg">
-                           <use xlink:href="#icon-hotspot"></use>
-                        </svg>
-                     </a>
-                     <a id="hotspot4" href="javascript:void(0)" class="fayde__hotspot fayde__hotspot--four">
-                        <svg class="fayde__svg">
-                           <use xlink:href="#icon-hotspot"></use>
-                        </svg>
-                     </a>
-                     <a id="hotspot5" href="javascript:void(0)" class="fayde__hotspot fayde__hotspot--five">
-                        <svg class="fayde__svg">
-                           <use xlink:href="#icon-hotspot"></use>
-                        </svg>
-                     </a>
-                     <img class="fayde__img" src="./images/fayde/can.png" alt="">
-                  </div>
-               <!-- </div> -->
+               <div class="fayde__content">
+                  <h2 class="fayde__heading">Can Ke 5 Fayde</h2>
+                  <p>Click on the hotspot</p>
+               </div>
+               <div class="fayde__can">
+                  <a id="hotspot1" href="javascript:void(0)" class="fayde__hotspot fayde__hotspot--one">
+                     <svg class="fayde__svg">
+                        <use xlink:href="#icon-hotspot"></use>
+                     </svg>
+                  </a>
+                  <a id="hotspot2" href="javascript:void(0)" class="fayde__hotspot fayde__hotspot--two">
+                     <svg class="fayde__svg">
+                        <use xlink:href="#icon-hotspot"></use>
+                     </svg>
+                  </a>
+                  <a id="hotspot3" href="javascript:void(0)" class="fayde__hotspot fayde__hotspot--three">
+                     <svg class="fayde__svg">
+                        <use xlink:href="#icon-hotspot"></use>
+                     </svg>
+                  </a>
+                  <a id="hotspot4" href="javascript:void(0)" class="fayde__hotspot fayde__hotspot--four">
+                     <svg class="fayde__svg">
+                        <use xlink:href="#icon-hotspot"></use>
+                     </svg>
+                  </a>
+                  <a id="hotspot5" href="javascript:void(0)" class="fayde__hotspot fayde__hotspot--five">
+                     <svg class="fayde__svg">
+                        <use xlink:href="#icon-hotspot"></use>
+                     </svg>
+                  </a>
+                  <img class="fayde__img" src="./images/fayde/can.png" alt="">
+               </div>
             </div>
-            <div class="overlay"></div>
-               <div data-popup="hotspot1" class="faydepop">
-                  <svg class="faydepop__svg">
-                     <use xlink:href="#icon-icon"></use>
-                  </svg>
-                  <div class="faydepop__desc">
-                     <strong>Infinitely recyclable so the environment is safe and you get to enjoy your drink, it's a win-win!</strong>
-                  </div>
-                  <a class="faydepop__close" href="javascript:void(0)">
-                     <svg class="faydepop__close-svg">
-                        <use xlink:href="#icon-close"></use>
-                     </svg>
-                  </a>
-               </div>
-               <div data-popup="hotspot2" class="faydepop">
-                  <svg class="faydepop__svg">
-                     <use xlink:href="#icon-icon"></use>
-                  </svg>
-                  <div class="faydepop__desc">
-                     <strong>Infinitely recyclable so the environment is safe and you get to enjoy your drink, it's a win-win!</strong>
-                  </div>
-                  <a class="faydepop__close" href="javascript:void(0)">
-                     <svg class="faydepop__close-svg">
-                        <use xlink:href="#icon-close"></use>
-                     </svg>
-                  </a>
-               </div>
-               <div data-popup="hotspot3" class="faydepop">
-                  <svg class="faydepop__svg">
-                     <use xlink:href="#icon-icon"></use>
-                  </svg>
-                  <div class="faydepop__desc">
-                     <strong>Infinitely recyclable so the environment is safe and you get to enjoy your drink, it's a win-win!</strong>
-                  </div>
-                  <a class="faydepop__close" href="javascript:void(0)">
-                     <svg class="faydepop__close-svg">
-                        <use xlink:href="#icon-close"></use>
-                     </svg>
-                  </a>
-               </div>
-               <div data-popup="hotspot4" class="faydepop">
-                  <svg class="faydepop__svg">
-                     <use xlink:href="#icon-icon"></use>
-                  </svg>
-                  <div class="faydepop__desc">
-                     <strong>Infinitely recyclable so the environment is safe and you get to enjoy your drink, it's a win-win!</strong>
-                  </div>
-                  <a class="faydepop__close" href="javascript:void(0)">
-                     <svg class="faydepop__close-svg">
-                        <use xlink:href="#icon-close"></use>
-                     </svg>
-                  </a>
-               </div>
-               <div data-popup="hotspot5" class="faydepop">
-                  <svg class="faydepop__svg">
-                     <use xlink:href="#icon-icon"></use>
-                  </svg>
-                  <div class="faydepop__desc">
-                     <strong>Infinitely recyclable so the environment is safe and you get to enjoy your drink, it's a win-win!</strong>
-                  </div>
-                  <a class="faydepop__close" href="javascript:void(0)">
-                     <svg class="faydepop__close-svg">
-                        <use xlink:href="#icon-close"></use>
-                     </svg>
-                  </a>
-               </div>
+            
          </div>
          <div class="section video">
             <ul class="v-slider">
                <li>
-                  <div class="v-slider__bg"  
+                  <div 
+                     data-url="M7lc1UVf-VE"
+                     class="v-slider__bg"  
                      style="background-image: url(./images/video/video-thumbnail.png);">
                      <div class="v-slider__content">
                         <a class="v-slider__play-wrap" href="javascript:void(0)">
@@ -303,7 +310,9 @@
                   </div>
                </li>
                <li>
-                  <div class="v-slider__bg" 
+                  <div 
+                     data-url="M7lc1UVf-VE"
+                     class="v-slider__bg" 
                      style="background-image: url(./images/video/video-thumbnail.png);">
                      <div class="v-slider__content">
                         <a class="v-slider__play-wrap" href="javascript:void(0)">
@@ -317,7 +326,9 @@
                   </div>
                </li>
                <li>
-                  <div class="v-slider__bg" 
+                  <div 
+                     data-url="M7lc1UVf-VE"
+                     class="v-slider__bg" 
                      style="background-image: url(./images/video/video-thumbnail.png);">
                      <div class="v-slider__content">
                         <a class="v-slider__play-wrap" href="javascript:void(0)">
@@ -331,7 +342,6 @@
                   </div>
                </li>
             </ul>
-
             <ul class="v-slider__arrows">
                <li>
                   <a href="javascript:void(0)" class="prev">
@@ -348,14 +358,15 @@
                   </a>
                </li>
             </ul>
-            
          </div>
          <div class="section about">
             <div class="about__content">
                <h2 class="about__h2">Aluminium Beverages Can Association of India - ABCAI</h2>
                <p class="about__p">Is a first-of-its- kind initiative, to create awareness and promote growth of aluminium beverage packaging as modern, safe, convenient and environment-friendly medium</p>
-               <img class="about__img" src="./images/about/can.png" alt="">
-               <!-- <p class="about__p">The role of the association is to foster mutually beneficial and positive dialogue within the aluminium beverage packaging ecosystem; the association will act as an intermediary between the industry, the government and the public</p> -->
+               <img class="about__img" src="./images/about/cans.png" alt="">
+               <p class="about__p">The role of the association is to foster mutually beneficial and positive dialogue within the aluminium beverage packaging ecosystem; the association will act as an intermediary between the industry, the government and the public</p>
+
+               <!-- <p class="about__p">The role of the association is to foster mutually beneficial and positive dialogue within the aluminium beverage packaging ecosystem; the association will act as an intermediary between the industry, the government and the public</p>             -->
             </div>
          </div>
          <div class="section testimonial">
@@ -390,101 +401,91 @@
             </ul>
          </div>
          <div class="section faq">
-
             <div class="faq__wrap">
-
-            <div class="section-heading">
-               <!-- <div class="section-heading__content"> -->
-                  <h2>We are here to help you</h2>
-                  <p>Browse through the most frequently asked questions.</p>
-                  <span class="seprator">
-                     <svg class="seprator__svg">
-                        <use xlink:href='#icon-arrow'></use>
-                     </svg>
-                  </span>
-               <!-- </div> -->
-            </div>
-            <!-- <div class="ta-container"> -->
+               <div class="section-heading-wrap">
+                  <div class="section-heading">
+                     <h2>We are here to help you</h2>
+                     <p>Browse through the most frequently asked questions.</p>
+                     <span class="seprator">
+                        <svg class="seprator__svg">
+                           <use xlink:href='#icon-arrow'></use>
+                        </svg>
+                     </span>
+                  </div>
+               </div>
                <div class="faq-box">
-                  <div class="faq-box__item">
+                  <div class="faq-box__item is-active">
                      <a href="javascript:void(0)">
                         <div class="faq-box__question">
                            <h3>How to share it on Whats app?</h3>
-                           <!-- <span class="faq-box__ico-wrap"> -->
-                              <svg class="faq-box__ico faq-box__ico--plus">
-                                 <use xlink:href="#icon-plus">
-                              </svg>
-                              <svg class="faq-box__ico faq-box__ico--minus">
-                                 <use xlink:href="#icon-minus">
-                              </svg>
-                           <!-- </span> -->
+                           <svg class="faq-box__ico faq-box__ico--plus">
+                              <use xlink:href="#icon-plus">
+                           </svg>
+                           <svg class="faq-box__ico faq-box__ico--minus">
+                              <use xlink:href="#icon-minus">
+                           </svg>
                         </div>
                      </a>
-                     <div class="faq-box__answer">
-                           <p>Look at the share icon on the website to share it via whats app and other social platforms too</p>
+                     <div class="faq-box__answer is-active">
+                        <p>Look at the share icon on the website to share it via whats app and other social platforms too</p>
                      </div>
                   </div>
                   <div class="faq-box__item">
                      <a href="javascript:void(0)">
                         <div class="faq-box__question">
                            <h3>How to share it on Facebook?</h3>
-                           <!-- <span class="faq-box__ico-wrap"> -->
-                              <svg class="faq-box__ico faq-box__ico--plus">
-                                 <use xlink:href="#icon-plus">
-                              </svg>
-                              <svg class="faq-box__ico faq-box__ico--minus">
-                                 <use xlink:href="#icon-minus">
-                              </svg>
-                           <!-- </span> -->
+                           <svg class="faq-box__ico faq-box__ico--plus">
+                              <use xlink:href="#icon-plus">
+                           </svg>
+                           <svg class="faq-box__ico faq-box__ico--minus">
+                              <use xlink:href="#icon-minus">
+                           </svg>
                         </div>
                      </a>
                      <div class="faq-box__answer">
-                           <p>Look at the share icon on the website to share it via whats app and other social platforms too</p>
+                        <p>Look at the share icon on the website to share it via whats app and other social platforms too</p>
                      </div>
                   </div>
                   <div class="faq-box__item">
                      <a href="javascript:void(0)">
                         <div class="faq-box__question">
                            <h3>Is it better than glass?</h3>
-                           <!-- <span class="faq-box__ico-wrap"> -->
-                              <svg class="faq-box__ico faq-box__ico--plus">
-                                 <use xlink:href="#icon-plus">
-                              </svg>
-                              <svg class="faq-box__ico faq-box__ico--minus">
-                                 <use xlink:href="#icon-minus">
-                              </svg>
-                           <!-- </span> -->
+                           <svg class="faq-box__ico faq-box__ico--plus">
+                              <use xlink:href="#icon-plus">
+                           </svg>
+                           <svg class="faq-box__ico faq-box__ico--minus">
+                              <use xlink:href="#icon-minus">
+                           </svg>
                         </div>
                      </a>
                      <div class="faq-box__answer">
-                           <p>Look at the share icon on the website to share it via whats app and other social platforms too</p>
+                        <p>Look at the share icon on the website to share it via whats app and other social platforms too</p>
                      </div>
                   </div>
                   <div class="faq-box__item">
                      <a href="javascript:void(0)">
                         <div class="faq-box__question">
                            <h3>How is it made?</h3>
-                           <!-- <span class="faq-box__ico-wrap"> -->
-                              <svg class="faq-box__ico faq-box__ico--plus">
-                                 <use xlink:href="#icon-plus">
-                              </svg>
-                              <svg class="faq-box__ico faq-box__ico--minus">
-                                 <use xlink:href="#icon-minus">
-                              </svg>
-                           <!-- </span> -->
+                           <svg class="faq-box__ico faq-box__ico--plus">
+                              <use xlink:href="#icon-plus">
+                           </svg>
+                           <svg class="faq-box__ico faq-box__ico--minus">
+                              <use xlink:href="#icon-minus">
+                           </svg>
                         </div>
                      </a>
                      <div class="faq-box__answer">
-                           <p>Look at the share icon on the website to share it via whats app and other social platforms too</p>
+                        <p>Look at the share icon on the website to share it via whats app and other social platforms too</p>
                      </div>
                   </div>
                </div>
-            <!-- </div> -->
-         </div>
+            </div>
          </div>
          <div class="section enquiry">
+            
             <h2>Cant find what you’re looking for?</h2>
             <p>email your query at cankafan@gmail.com</p>
+
             <form class="enq-form" action="#">
                <div class="enq-form__inputWrap">
                   <input type="text" id="name" name="name" placeholder="Full Name"/>
@@ -500,6 +501,14 @@
                </div>
                <a class="enq-form__submit" href="#">Submit</a>
             </form>
+
+            <div class="thankyou">
+               <img src="./images/thankyou.svg" alt="">
+               <h2>Varun</h2>
+               <p>One of our representatives will reach out to you shortly</p>
+               <a class="thankyou__btn" href="javascript:void(0)">Back</a>
+            </div>
+
          </div>
          <div class="section footer fp-auto-height">
             <div class="footer__content">
@@ -548,10 +557,17 @@
          integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
          crossorigin="anonymous"></script>
       <script 
+         src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js" integrity="sha256-XqE8SZB9GifYkLZn4NA6LNdYt47dbn2YyZt3zAk0K3c=" 
+         crossorigin="anonymous"></script>
+      <script 
          src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js" 
          integrity="sha256-SNaaqfQPa0XlEqQDrsurQ+Qq5XnhNrwHQXnZpdXlCEI=" 
          crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
-      <script src="./js/script.js"></script>
+      <script 
+         src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" 
+         integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" 
+         crossorigin="anonymous"></script>
+      <script 
+         src="./js/script.js"></script>
    </body>
 </html>
