@@ -264,7 +264,7 @@ p{ font-size: 1em; }
             position: absolute;
             width: 100%;
             bottom: 0;
-            height: calc(100vh - 500px);
+            height: calc(100vh - 450px);
             overflow: hidden;
             @media(min-width: 768px){
                 // height: calc(100vh - 455px);
@@ -277,12 +277,14 @@ p{ font-size: 1em; }
         // left: 0;
         // bottom: 0;
         // width: 220px;
-        transform: translateX(-40px) rotate(10deg);
+        // 
+        transform: translateX(-40px)  rotate(10deg);
         position: relative;
         display: inline-block;
     }
     &__can{
         // transform: translateX(-50%) rotate(10deg);
+        width: 400px;
         &--close{ display: block; }
         &--open{ display: none; }
     }
@@ -454,7 +456,7 @@ p{ font-size: 1em; }
         position: relative;
         display: inline-block;
         transition: .2s;
-        // transform: rotate(-15deg);
+        transform: rotate(-15deg);
         margin: 0 20px;
         padding: 30px;
         padding-bottom: 0;
@@ -693,8 +695,7 @@ p{ font-size: 1em; }
         }
     }
     &__img{
-        // width: 120px;
-        width: 60%;
+        width: 200px;
         display: block;
         margin: auto;
         margin-bottom: 20px;
