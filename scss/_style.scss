@@ -26,7 +26,7 @@ p{ font-size: 1em; }
 .section{ 
     padding-left: 20px; 
     padding-right: 20px; 
-    // padding-top: 77px!important;
+    padding-top: 75px!important;
     @media(min-width: 768px){
         // padding-top: 100px!important;
     }
@@ -137,9 +137,7 @@ p{ font-size: 1em; }
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-    padding-left: 10px;
-    padding-right: 50px;
+    padding: 0px 50px 0 5%;
     img{
         display: block;
     }
@@ -158,9 +156,8 @@ p{ font-size: 1em; }
     // z-index: 1;
     // padding: 10px;
     &__katak-tish{
-        width: 111px;
-        // display: block;
-        // width: 70px;
+        padding: 10px 0;
+        width: 110px;
     }
     &__cankafan{
         padding: 0 10px;
@@ -246,27 +243,40 @@ p{ font-size: 1em; }
     }
 
     &__asli-maza{ 
-        display: block;
-        margin: auto;
-        padding: 0 20px;
-        width: 300px;
+        // margin: auto;
+        // margin-bottom: 15px;
+        // height: calc(60vh - 200px);
+    }
+    &__imgwrap{ 
+        margin-top: 40px;
+        // margin-bottom: 20px;
+        height: calc(50vh - 200px);
+        &.inner{
+            height: calc(60vh - 200px);
+        }
+        img{ 
+            height: 100%;
+        }
     }
     &__splash-logo{ 
-        display: block;
-        margin: auto;
-        width: 400px;
+        // padding: 0 20px;
+        // height: calc(50vh - 155px);
+        img{ display: block; margin: auto; }
     }
     &__animate-wrap{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
         padding: 0 20%;
-        padding-top: 20px;
+        padding-top: 30px;
         // height: 50vh;
         // padding-top: 30px;
+        height: 50vh;
+        overflow: hidden;
         &.inner{
-            position: absolute;
             width: 100%;
-            bottom: 0;
-            height: calc(100vh - 420px);
-            overflow: hidden;
+            // height: calc(100vh - 420px);
+            height: 40vh;
             @media(min-width: 768px){
                 // height: calc(100vh - 455px);
             }
@@ -278,12 +288,13 @@ p{ font-size: 1em; }
         // left: 0;
         // bottom: 0;
         // width: 220px;
-        transform: translateX(-40px) rotate(10deg);
+        transform: translateX(-8%);
         position: relative;
         display: inline-block;
     }
     &__can{
         // transform: translateX(-50%) rotate(10deg);
+        width: 500px;
         &--close{ display: block; }
         &--open{ display: none; }
     }
@@ -297,15 +308,16 @@ p{ font-size: 1em; }
     }
     &__katak-tishhh{
         position: absolute;
-        left: 0;
-        top: -5%;
-        width: 70%;
+        top: 0;
+        width: 50%;
         left: 95%;
         transform-origin: bottom left;
-        transform: translateX(-50%) rotate(-10deg) scale(0);
+        // rotate(-10deg)
+        transform: translateX(-50%)  scale(0);
         transition: .2s;
         &.is-active{
-            transform: translateX(-50%) rotate(-10deg) scale(1);
+            // rotate(-10deg)
+            transform: translateX(-50%)  scale(1);
         }
     }
     &__btn{
@@ -318,9 +330,7 @@ p{ font-size: 1em; }
         margin: 10px 0;
     }
     &__text{
-        width: 90%;
         margin: auto;
-        margin-top: 15px;
     }
     @media(min-width: 480px){
         &__text{
@@ -383,6 +393,8 @@ p{ font-size: 1em; }
         transform: translateY(-50%);
         width: 160px;
         left: -80px;
+        // top: 50%;
+        // transform: translateY(-50%);
     }
     &__right-can{
         display: none;
@@ -455,7 +467,7 @@ p{ font-size: 1em; }
         position: relative;
         display: inline-block;
         transition: .2s;
-        // transform: rotate(-15deg);
+        transform: rotate(-15deg);
         margin: 0 20px;
         padding: 30px;
         padding-bottom: 0;
@@ -694,8 +706,7 @@ p{ font-size: 1em; }
         }
     }
     &__img{
-        // width: 120px;
-        width: 60%;
+        width: 200px;
         display: block;
         margin: auto;
         margin-bottom: 20px;

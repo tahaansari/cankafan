@@ -27,7 +27,7 @@ $(document).ready(function() {
         // autoScrolling:false,
         // fitToSection:false,
         fitToSection: true,
-        paddingTop: '100px',
+        paddingTop: '110px',
         paddingBottom: '20px',
         responsiveHeight: '600',
         scrollOverflow:true,
@@ -128,6 +128,7 @@ $(document).ready(function() {
     var x = document.getElementById("myAudio"); 
     $('.home__btn').click(function(){
         $('.header').css('opacity','1');
+        $('.home__imgwrap').addClass('inner');
         $('.home__animate-wrap').addClass('inner');
         $('.splash-screen').hide();
         $('.home-screen').show();
