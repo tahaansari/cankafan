@@ -30,23 +30,29 @@ $(document).ready(function() {
         paddingTop: '110px',
         paddingBottom: '20px',
         responsiveHeight: '600',
-        scrollOverflow:true,
+        // scrollOverflow:true,
         fixedElements:'.header',
         slidesNavPosition: 'top',
-        onLeave: function(origin, destination, direction){
-            $('.overlay').click();
-            console.log(origin)
-            // var leavingSection = this;
-            // //after leaving section 2
-            if(origin == 8){
-                $('.scroll-to__svg').addClass('up');
-            }else{
-                $('.scroll-to__svg').removeClass('up');
-            }
-        }
         // verticalCentered:false
         // scrollHorizontally: true,
+        onLeave: function(origin, destination, direction){
+            // console.log(destination)
+            if(destination == 9){
+                $('.scroll-to').hide();
+            }
+            if(destination != 9){
+                $('.scroll-to').fadeIn();
+            }
+        },
     });
+
+    // $.fn.fullpage:on(origin, destination, direction){
+    //     $('.overlay').click();
+    //     var leavingSection = this;
+    //     console.log(origin)
+    //     console.log(destination)
+    //     console.log(direction)
+    // }
     
 
     //methods
