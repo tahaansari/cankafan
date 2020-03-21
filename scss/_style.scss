@@ -553,7 +553,7 @@ p {
 	&__can {
 		// added 50 for extra room
 		// height: calc(100vh - 300px);
-		height: 65vh;
+		height: 70vh;
 		overflow: hidden;
 	}
 	&__img {
@@ -750,11 +750,10 @@ p {
 	}
 	&__content {
 		position: relative;
-		height: calc(100vh - 100px);
+		// height: calc(100vh - 100px);
         // overflow: hidden;
-        
-        overflow-x: hidden;
-        overflow-y: auto;
+        // overflow-x: hidden;
+        // overflow-y: auto;
 
 	}
 	@media(min-width: 480px) {

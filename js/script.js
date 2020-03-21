@@ -30,9 +30,9 @@ $(document).ready(function() {
         paddingTop: '110px',
         paddingBottom: '20px',
         responsiveHeight: '600',
-        // scrollOverflow:true,
         fixedElements:'.header',
-        slidesNavPosition: 'top',
+        scrollOverflow:true,
+        scrollOverflowReset:true,
         // verticalCentered:false
         // scrollHorizontally: true,
         onLeave: function(origin, destination, direction){
