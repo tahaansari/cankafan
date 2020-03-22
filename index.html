@@ -178,20 +178,22 @@
             </symbol>
          </defs>
       </svg>
-      <div class="header">
-         <div class="header__left">
-            <img class="header__katak-tish" src="./images/katak-tish.png" alt="">
-         </div>
-         <div class="header__center">
-            <img class="header__cankafan" src="./images/cankafan.png" alt="">
-         </div>
-         <div class="header__right">
-            <a class="header__watch-video" href="javascript:void(0)">
-               <svg class="header__play-svg">
-                  <use xlink:href="#icon-play"></use>
-               </svg>
-               <span> watch video </span>
-            </a>
+      <div class="header__wrap">
+         <div class="header">
+            <div class="header__left">
+               <img class="header__katak-tish" src="./images/katak-tish.png" alt="">
+            </div>
+            <div class="header__center">
+               <img class="header__cankafan" src="./images/cankafan.png" alt="">
+            </div>
+            <div class="header__right">
+               <a class="header__watch-video" href="javascript:void(0)">
+                  <svg class="header__play-svg">
+                     <use xlink:href="#icon-play"></use>
+                  </svg>
+                  <span> watch video </span>
+               </a>
+            </div>
          </div>
       </div>
       <a class="scroll-to" href="javascript:void(0)">
@@ -199,7 +201,7 @@
             <use xlink:href="#icon-scroll"></use>
          </svg>
          <strong>
-         SCROLL TOooo <br>
+         SCROLL TO <br>
          EXPERIENCE
          </strong>
       </a>
@@ -217,23 +219,19 @@
                Your browser does not support the audio element.
             </audio>
             <div class="splash-screen">
-               <div class="home__splash-logo">
-                  <div class="home__imgwrap">
-                     <img src="./images/splash-logo.png" alt="">
-                  </div>
-                  <a href="javascript:void(0)" class="home__btn">
-                  EXPERIENCE THE MOMENT
-                  </a> 
+               <div class="home__splashimgwrap">
+                  <img src="./images/splash-logo.png" alt="">
                </div>
+               <a href="javascript:void(0)" class="home__btn">
+               EXPERIENCE THE MOMENT
+               </a> 
             </div>
             <div class="home-screen">
-               <div class="home__asli-maza">
-                  <div class="home__imgwrap">
-                     <img src="./images/aslimaza.svg" alt="">
-                  </div>
-                  <div class="home__text">
-                     <p><strong>Nothing communicates product freshness quite like opening a beverage can.</strong></p>
-                  </div>
+               <div class="home__homeimgwrap">
+                  <img src="./images/aslimaza.svg" alt="">
+               </div>
+               <div class="home__text">
+                  <p>Nothing communicates product freshness quite like opening a beverage can.</p>
                </div>
             </div>
             <div class="home__animate-wrap">
@@ -368,15 +366,18 @@
             </ul>
          </div>
          <div class="section about">
-            <div class="about__content">
-               <h2 class="about__h2">Aluminium Beverages Can Association of India - ABCAI</h2>
-               <p class="about__p">Is a first-of-its- kind initiative, to create awareness and promote growth of aluminium beverage packaging as modern, safe, convenient and environment-friendly medium</p>
-               <div class="about__img">
-                  <img src="./images/about/all-cans.svg" alt="">
+
+            <div class="about__contentwrap">
+               <div class="about__content">
+                  <h2 class="about__h2">Aluminium Beverages Can Association of India - ABCAI</h2>
+                  <p class="about__p">Is a first-of-its- kind initiative, to create awareness and promote growth of aluminium beverage packaging as modern, safe, convenient and environment-friendly medium</p>
+                  <div class="about__img">
+                     <img src="./images/about/all-cans.svg" alt="">
+                  </div>
+                  <p class="about__p">The role of the association is to foster mutually beneficial and positive dialogue within the aluminium beverage packaging ecosystem; the association will act as an intermediary between the industry, the government and the public</p>
                </div>
-               <p class="about__p">The role of the association is to foster mutually beneficial and positive dialogue within the aluminium beverage packaging ecosystem; the association will act as an intermediary between the industry, the government and the public</p>
-               <!-- <p class="about__p">The role of the association is to foster mutually beneficial and positive dialogue within the aluminium beverage packaging ecosystem; the association will act as an intermediary between the industry, the government and the public</p>             -->
             </div>
+
          </div>
          <div class="section testimonial">
             <ul class="testi-slider">
@@ -562,21 +563,15 @@
          src="https://code.jquery.com/jquery-3.4.1.js"
          integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
          crossorigin="anonymous"></script>
-
+      
       <script 
-         src="./js/scrolloverflow.js" 
+         src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js" integrity="sha256-XqE8SZB9GifYkLZn4NA6LNdYt47dbn2YyZt3zAk0K3c=" 
          crossorigin="anonymous"></script>
 
       <script 
-         src="./js/fullpage.scrollOverflowReset.limited.min.js"></script>
-
-      <script 
-      src="./js/fullpage.extensions.min.js"></script>
-
-      <!-- <script 
          src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js" 
          integrity="sha256-SNaaqfQPa0XlEqQDrsurQ+Qq5XnhNrwHQXnZpdXlCEI=" 
-         crossorigin="anonymous"></script> -->
+         crossorigin="anonymous"></script>
       <script 
          src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" 
          integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" 

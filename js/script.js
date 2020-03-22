@@ -21,7 +21,9 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.
 
+
 $(document).ready(function() {
+
     $('#fullpage').fullpage({
         //options here
         // autoScrolling:false,
@@ -29,10 +31,9 @@ $(document).ready(function() {
         fitToSection: true,
         paddingTop: '110px',
         paddingBottom: '20px',
-        responsiveHeight: '600',
-        fixedElements:'.header',
+        responsiveHeight: '599',
+        fixedElements:'.header__wrap',
         scrollOverflow:true,
-        scrollOverflowReset:true,
         // verticalCentered:false
         // scrollHorizontally: true,
         onLeave: function(origin, destination, direction){
@@ -133,18 +134,27 @@ $(document).ready(function() {
     })
     var x = document.getElementById("myAudio"); 
     $('.home__btn').click(function(){
-        $('.header').css('opacity','1');
-        $('.home__imgwrap').addClass('inner');
+        $('.header__wrap').show();
         $('.home__animate-wrap').addClass('inner');
         $('.splash-screen').hide();
         $('.home-screen').show();
         $('.scroll-to').fadeIn();
+        // $.fn.fullpage.setAllowScrolling(true);
+        // x.play(); 
+        // setTimeout(function(){
+        //     $('.home__can').toggle();
+        //     $('.home__katak-tishhh').addClass('is-active');
+        // },800)
         $.fn.fullpage.setAllowScrolling(true);
         x.play(); 
         setTimeout(function(){
             $('.home__can').toggle();
-            $('.home__katak-tishhh').addClass('is-active');
-        },800)
+            setTimeout(function(){
+                $('.home__katak-tishhh').addClass('is-active');
+            },400)
+        },200)
+
+
     })
 
     var player;
@@ -181,6 +191,12 @@ $(document).ready(function() {
 
 });
 
-$(window).on('load', function() { 
-    $('.preloader').slideUp();
+$(window).on('load', function() {
+
+    if($(window).height() < 600){
+        $('body').css('overflow-x','hidden')
+    }else{
+        $('body').css('overflow-x','hidden')
+    }
+
 });

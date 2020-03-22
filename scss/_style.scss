@@ -25,17 +25,17 @@ p {
 	font-size: 1em;
 }
 
-@media(min-width:768px) {
-	h2 {
-		font-size: 1.5625em;
-	}
-	h3 {
-		font-size: 1.25em;
-	}
-	p {
-		font-size: 1.1875em;
-	}
-}
+// @media(min-width:768px) {
+// 	h2 {
+// 		font-size: 1.5625em;
+// 	}
+// 	h3 {
+// 		font-size: 1.25em;
+// 	}
+// 	p {
+// 		font-size: 1.1875em;
+// 	}
+// }
 
 @media(min-width:1200px) {
 	h2 {
@@ -124,14 +124,14 @@ p {
 	z-index: 1;
 	color: #ffffff;
 	text-align: center;
-	font-size: .72em;
+	font-size: .75em;
 	strong {
 		display: block;
 		// text-shadow: 2px 2px #000000;
 	}
 	&__svg {
-		width: 40px;
-		height: 40px;
+		width: 30px;
+		height: 30px;
 		transform: translateY(-14px);
 		transition: .2s;
 		animation: scroll-to 2s linear infinite;
@@ -171,7 +171,6 @@ p {
 
 // HEADER
 .header {
-	opacity: 0;
 	width: 100%;
 	position: fixed;
 	top: 0;
@@ -179,7 +178,10 @@ p {
 	justify-content: space-between;
 	align-items: center;
     // padding: 0px 50px 0 5%;
-    padding-right: 50px;
+	padding-right: 50px;
+	&__wrap{
+		display: none;
+	}	
 	img {
 		display: block;
 	}
@@ -213,20 +215,20 @@ p {
 		border-bottom-left-radius: 60px;
 		text-transform: uppercase;
 		font-weight: bold;
-		font-size: 16px;
 		transition: .1s;
 		position: absolute;
 		top: 50%;
 		right: -115px;
 		transform: translateY(-50%);
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		animation: vshow 2s infinite forwards;
 		&.is-active {
 			right: 0px;
 		}
 	}
 	&__play-svg {
-		width: 35px;
-		height: 35px;
+		width: 30px;
+		height: 30px;
 		display: inline-block;
 		vertical-align: middle;
 	}
@@ -239,9 +241,10 @@ p {
         }
         &__right {
             width: 25%;
-        }
+		}
 	}
 }
+
 
 // HEADER
 // &__katak-tish{ 
@@ -262,6 +265,7 @@ p {
 	text-align: center;
 	padding-left: 0;
 	padding-right: 0;
+	padding-top: 0!important;
 	.fp-tableCell {
 		vertical-align: top;
 	}
@@ -273,55 +277,25 @@ p {
 		top: 0;
 		object-fit: cover;
 	}
-	// .smokegif{
-	//     position: absolute;
-	//     width: 100%;
-	//     height: 100%;
-	//     left: 0;
-	//     top: 0;
-	// }
-	&__asli-maza {
-		// margin: auto;
-		// margin-bottom: 15px;
-		// height: calc(60vh - 200px);
+	
+	&__splashimgwrap {
+		height: 30vh;
+		margin-bottom: 15px;
+		img {height: 100%;}
 	}
-	&__imgwrap {
-		
-		// // margin-bottom: 20px;
-        // height: calc(50vh - 200px);
-        padding-top: 3vh;
-        height: 30vh;
-		&.inner {
-			height: 40vh;
-		}
-		img {
-			height: 100%;
-		}
-	}
-	&__splash-logo {
-		// padding: 0 20px;
-		// height: calc(50vh - 155px);
-		img {
-			display: block;
-			margin: auto;
-		}
+	&__homeimgwrap {
+		height: 40vh;
+		img {height: 100%;}
 	}
 	&__animate-wrap {
 		width: 100%;
 		position: absolute;
 		bottom: 0;
-		padding: 0 20%;
-		// padding-top: 30px;
-		// height: 50vh;
-		// padding-top: 30px;
+		padding: 0 40px;
 		height: 45vh;
 		overflow: hidden;
 		&.inner {
-			// width: 100%;
-    		height: 40vh;
-			@media(min-width: 768px) {
-				// height: calc(100vh - 455px);
-			}
+    		height: 37vh;
 		}
 	}
 	&__katak-wrap {
@@ -355,7 +329,7 @@ p {
 		position: absolute;
 		top: 0;
 		width: 50%;
-		left: 95%;
+		left: 90%;
 		transform-origin: bottom left;
 		// rotate(-10deg)
 		transform: translateX(-50%) scale(0);
@@ -368,11 +342,13 @@ p {
 	&__btn {
 		display: inline-block;
 		background: #00A09B;
-		box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.253961);
 		border-radius: 30px;
-		padding: 8px 30px;
-		font-size: 0.75em;
-		margin: 10px 0;
+		padding: 6px 20px;
+		font-size: 0.72em;
+		box-shadow: 0px 2px 3px rgba(0,0,0,0.253961);
+		&:hover{
+			box-shadow: 0px 4px 5px rgba(0,0,0,0.253961);
+		}
 	}
 	&__text {
 		margin: auto;
@@ -382,22 +358,27 @@ p {
 			width: 450px;
 		}
 	}
-}
-
-.home-screen {
-	padding: 0 15px;
-	// padding-top: 100px; 
-	position: relative;
-	display: none;
 	@media(min-width: 768px) {
-		// padding-top: 130px; 
+		&__btn {
+			font-size: 1em;
+			padding: 8px 25px;
+		}
 	}
 }
 
-.splash-screen {
-	padding: 0 15px;
-	// padding-top: 60px; 
+.home-screen {
+	display: none;
 	position: relative;
+	padding: 0 40px;
+	padding-top: 10vh;
+	height: 60vh;
+}
+
+.splash-screen {
+	position: relative;
+	padding: 0 40px;
+	padding-top: 10vh;
+	height: 50vh;
 }
 // HOME
 
@@ -488,7 +469,7 @@ p {
 	}
 	&__content {
 		// padding-top: 100px;
-		padding-bottom: 10px;
+		padding-bottom: 40px;
 	}
 	&__heading {
 		position: relative;
@@ -507,8 +488,6 @@ p {
 		display: inline-block;
 		transition: .2s;
 		transform: rotate(-15deg);
-		margin: 0 20px;
-		padding: 30px;
 		padding-bottom: 0;
 		&.is-active {
 			transform: rotate(15deg);
@@ -522,28 +501,28 @@ p {
 		position: absolute;
 		font-size: 0;
 		&--one {
-			top: 0px;
+			bottom: calc(100% - 30px);
 			left: 50%;
 			transform: rotate(-90deg) translateY(-50%);
 		}
 		&--two {
 			top: 30%;
-			left: 0;
+			left: -30px;
 			transform: rotate(180deg) translateY(0%);
 		}
 		&--three {
 			top: 60%;
-			left: 0;
+			left: -30px;
 			transform: rotate(180deg) translateY(0%);
 		}
 		&--four {
 			top: 30%;
-			right: 0;
+			right: -30px;
 			transform: rotate(0deg) translateY(0%);
 		}
 		&--five {
 			top: 60%;
-			right: 0;
+			right: -30px;
 			transform: rotate(0deg) translateY(0%);
 		}
 	}
@@ -551,10 +530,8 @@ p {
 		position: relative;
 	}
 	&__can {
-		// added 50 for extra room
-		// height: calc(100vh - 300px);
-		height: 70vh;
-		overflow: hidden;
+		height: 60vh;
+		overflow: visible;
 	}
 	&__img {
 		height: 100%;
@@ -574,19 +551,6 @@ p {
 			transform: translateY(-50%);
 			text-align: left;
 			margin: 0;
-		}
-	}
-	@media(min-width: 1200px) {
-		&__can {
-			padding: 35px;
-			padding-bottom: 0;
-		}
-		&__svg {
-			width: 70px;
-			height: 70px;
-		}
-		&__content {
-			right: 130%;
 		}
 	}
 }
@@ -681,11 +645,11 @@ p {
 		font-size: 0;
 		position: relative;
 		z-index: 1;
-		margin-top: 8px;
+		margin-top: 5px;
 	}
 	&__play {
-		width: 54px;
-		height: 54px;
+		width: 40px;
+		height: 40px;
 	}
 	&__arrows {
 		position: absolute;
@@ -723,8 +687,8 @@ p {
 			// bottom: 240px;
 		}
 		&__play {
-			width: 64px;
-			height: 64px;
+			width: 50px;
+			height: 50px;
 		}
 	}
 }
@@ -733,6 +697,10 @@ p {
 // ABOUT
 .about {
 	background: url(../images/about/bg.jpg) no-repeat center/cover;
+	padding-top: 110px!important;
+	padding-bottom: 40px!important;
+	padding-left: 30px;
+    padding-right: 30px;
 	&__h2 {
 		margin-bottom: 10px;
 	}
@@ -748,18 +716,20 @@ p {
 		margin: auto;
 		margin-bottom: 20px;
 	}
-	&__content {
-		position: relative;
-		// height: calc(100vh - 100px);
-        // overflow: hidden;
+	
+	&__contentwrap{
+		// height: calc(100vh - 140px);
         // overflow-x: hidden;
-        // overflow-y: auto;
-
+		// overflow-y: auto;
+		// display: flex;
+		// align-items: center;
+	}
+		
+	&__content{
+		position: relative;
+		// height: 100%;
 	}
 	@media(min-width: 480px) {
-        &__content {
-            height: auto;
-        }
 		&__content {
 			padding: 0 10%;
 		}
@@ -768,7 +738,7 @@ p {
 		&__content {
 			padding-left: 0;
 			padding-right: 0;
-			width: 240px;
+			width: 220px;
             margin-left: 10%;
             overflow: visible;
 		}
@@ -788,8 +758,7 @@ p {
 			margin-left: 12%;
 		}
 		&__img {
-			width: 500px;
-			left: calc(100% + 80px);
+			width: 600px;
 		}
 	}
 }
@@ -899,7 +868,7 @@ p {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 13px 0;
+		padding: 15px 0;
 	}
 	&__answer {
 		display: none;
@@ -925,23 +894,25 @@ p {
 			border-bottom-right-radius: 4px;
 		}
 	}
-	@media(min-width: 768px) {
-		&__ico {
-			width: 14px;
-			height: 14px;
-		}
-	}
+	// @media(min-width: 768px) {
+	// 	&__ico {
+	// 		width: 14px;
+	// 		height: 14px;
+	// 	}
+	// }
 	@media(min-width: 992px) {
-		&__ico {
-			width: 18px;
-			height: 18px;
-		}
+		
 		&__answer {
 			padding-left: 20px;
 			margin-left: 15px;
 		}
 	}
-	@media(min-width: 1200px) {}
+	@media(min-width: 1200px) {
+		&__ico {
+			width: 16px;
+			height: 16px;
+		}
+	}
 }
 
 .section-heading-wrap {
@@ -1015,7 +986,7 @@ p {
 .enq-form {
 	margin-top: 20px;
 	&__inputWrap {
-		margin-bottom: 10px;
+		margin-bottom: 2px;
 	}
 	&__inputWrap input,
 	&__inputWrap textarea {
